@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./top-foot/css/top-foot.css">
+</head>
+
+<body>
+    <div class="head">
+        <div class="head-navs">
+            <div class="head-main">
+                <div class="head-logo">
+                    <img src="./top-foot/imgs/logo.png" alt="">
+                </div>
+                <div class="head-nav">
+                    <div class="head-nav-top">
+                        <span class="login">
+                            <i class="iconfont "></i>
+                            登录
+                        </span>
+                        <span class="regester">
+                            <i class="iconfont "></i>
+                            注册
+                        </span>
+                        <span class="phone">
+                            <i class="iconfont "></i>
+                            0771-4955988
+                        </span>
+                    </div>
+                    <div class="head-nav-bot">
+                        <ul>
+                            <li>
+                                <a href="">网站首页</a>
+                            </li>
+                            <li>
+                                <a href="">关于云舍</a>
+                            </li>
+                            <li>
+                                <a href="">村落环境</a>
+                            </li>
+                            <li>
+                                <a href="">云舍驿站</a>
+                            </li>
+                            <li>
+                                <a href="">活动庆典</a>
+                            </li>
+                            <li>
+                                <a href="">新闻资讯</a>
+                            </li>
+                            <li>
+                                <a href="">联系我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app">
+
+    </div>
+    <script src="./js/jquery-3.0.0.min.js"></script>
+    <script>
+        $.ajax({
+            url: 'http://172.16.5.135:3000/getData',
+            type: 'get',
+            data: {
+                type: '新闻资讯'
+            },
+            success: (data) => {
+                console.log(data);
+                $('.app').html(data[2].content)
+            }
+        })
+    </script>
+</body>
+
+</html>

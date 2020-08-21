@@ -1,0 +1,54 @@
+/*
+ * @Description: 
+ * @Author: yy2257
+ * @Date: 2020-08-19 19:26:58
+ * @LastEditTime: 2020-08-20 20:24:36
+ * @LastEditors: yy2257
+ */
+var express = require('express');
+var router = express.Router();
+var bodyParser = require('body-parser');
+var { con } = require('../db/db');
+con.connect();
+
+router.use(bodyParser.urlencoded({ extended: false }));
+router.use(bodyParser.json());
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+    res.render('./top', {});
+});
+
+router.get('/getData', function(req, res, next) {
+    if (req.query.type) {
+        if (req.query.type === '*') {
+            var sql = `select * from resources`;
+        } else {
+            var sql = `select * from resources where type like '${req.query.type}'`;
+        }
+        con.query(sql, function(err, data) {
+            // console.log(data[2]);
+            res.send(data);
+        })
+    } else {
+        res.send('参数不正确');
+    }
+});
+// router.post('/login', function(req, res, next) {
+//     var sql = `select * from resources`;
+//     con.query(sql, function(err, data) {
+//         if (err) {
+//             console.log(err);
+//         } else {
+//             res.send({
+//                 code: 1,
+//                 data: data[0],
+//                 message: 'success'
+//             })
+//         }
+//     })
+// })
+
+
+
+module.exports = router;
