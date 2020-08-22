@@ -5,28 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1582419_49rqs7dgiie.css">
     <link rel="stylesheet" href="./top-foot/css/top-foot.css">
 </head>
 
 <body>
     <div class="head">
         <div class="head-navs">
-            <div class="head-main">
+            <div class="main">
                 <div class="head-logo">
                     <img src="./top-foot/imgs/logo.png" alt="">
                 </div>
                 <div class="head-nav">
                     <div class="head-nav-top">
                         <span class="login">
-                            <i class="iconfont "></i>
-                            登录
+                            <i class="iconfont icon-denglu"></i>
+                            <a href="">登录</a>
                         </span>
-                        <span class="regester">
-                            <i class="iconfont "></i>
-                            注册
+                        <span class="regestor">
+                            <i class="iconfont icon-zhuce"></i>
+                            <a href="">注册</a>
                         </span>
                         <span class="phone">
-                            <i class="iconfont "></i>
+                            <i class="iconfont icon-phone6dianhua"></i>
                             0771-4955988
                         </span>
                     </div>
@@ -58,25 +59,27 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="app">
-
+        <div class="head-banner">
+            <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="head-banner-bar">
+                <span class="current"></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="next">
+                <i class="iconfont icon-you"></i>
+            </div>
+            <div class="prev">
+                <i class="iconfont icon-zuo"></i>
+            </div>
+        </div>
     </div>
     <script src="./js/jquery-3.0.0.min.js"></script>
-    <script>
-        $.ajax({
-            url: 'http://172.16.5.135:3000/getData',
-            type: 'get',
-            data: {
-                type: '新闻资讯'
-            },
-            success: (data) => {
-                console.log(data);
-                $('.app').html(data[2].content)
-            }
-        })
-    </script>
+    <script src="./top-foot/js/top-foot.js"></script>
 </body>
 
 </html>
