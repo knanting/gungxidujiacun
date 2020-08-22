@@ -1,70 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1582419_49rqs7dgiie.css">
-    <link rel="stylesheet" href="./top-foot/css/top-foot.css">
-</head>
-
-<body>
-    <div class="footer">
-        <div class="foot-top">
-            <div class="main">
-                <div class="foot-top-left">
-                    <h2 class="foot-title">云舍驿站<span>OUR HOTEL ROOM</span></h2>
-                    <ul>
-                    </ul>
+<div class="footer">
+    <div class="foot-top">
+        <div class="main">
+            <div class="foot-top-left">
+                <h2 class="foot-title">云舍驿站<span>OUR HOTEL ROOM</span></h2>
+                <ul>
+                </ul>
+            </div>
+            <div class="foot-top-mid">
+                <h2 class="foot-title">联系我们<span>CONTACT US</span></h2>
+                <div class="foot-phone">
+                    <i class="iconfont icon-phone6dianhua"></i>
+                    <span>电话：0771-4955988</span>
                 </div>
-                <div class="foot-top-mid">
-                    <h2 class="foot-title">联系我们<span>CONTACT US</span></h2>
-                    <div class="foot-phone">
-                        <i class="iconfont icon-phone6dianhua"></i>
-                        <span>电话：0771-4955988</span>
-                    </div>
-                    <div class="foot-email">
-                        <i class="iconfont icon-tubiao209"></i>
-                        <span>邮箱：1523340749@qq.com</span>
-                    </div>
-                    <div class="foot-address">
-                        <i class="iconfont icon-dizhi"></i>
-                        <span>地址：广西省南宁市江南区金凯街友谊路华联村六连坡8号 云舍度假村落</span>
-                    </div>
+                <div class="foot-email">
+                    <i class="iconfont icon-tubiao209"></i>
+                    <span>邮箱：1523340749@qq.com</span>
                 </div>
-                <div class="foot-top-right">
-                    <img src="./top-foot/imgs/code.png" alt="">
-                    <p>手机版二维码</p>
+                <div class="foot-address">
+                    <i class="iconfont icon-dizhi"></i>
+                    <span>地址：广西省南宁市江南区金凯街友谊路华联村六连坡8号 云舍度假村落</span>
                 </div>
             </div>
-        </div>
-        <div class="foot-bot">
-            <div class="main">
-                <p>广西云舍旅游投资有限公司版权所有 | 桂ICP备18008798号-1</p>
-                <span>网站建设：中企动力   南宁分公司</span>
+            <div class="foot-top-right">
+                <img src="./top-foot/imgs/code.png" alt="">
+                <p>手机版二维码</p>
             </div>
         </div>
     </div>
-    <script src="./js/jquery-3.0.0.min.js"></script>
-    <script>
-        $.ajax({
-            url: 'http://172.16.5.119:3000/getData',
-            method: 'get',
-            data: {
-                type: '云舍驿站'
-            },
-            success: data => {
-                console.log(data);
-                let html = ''
-                $.each(data.data, (index, value) => {
-                    html += `<li>>${value.introduce}</li>`
-                })
-                console.log($('.foot-top-left ul'));
-                $('.foot-top-left ul').html(html)
-            }
-        })
-    </script>
-</body>
-
-</html>
+    <div class="foot-bot">
+        <div class="main">
+            <p>广西云舍旅游投资有限公司版权所有 | 桂ICP备18008798号-1</p>
+            <span>网站建设：中企动力   南宁分公司</span>
+        </div>
+    </div>
+</div>
+<script>
+    $.ajax({
+        url: 'http://172.16.5.119:3000/getData',
+        method: 'get',
+        data: {
+            type: '云舍驿站'
+        },
+        success: data => {
+            console.log(data);
+            let html = ''
+            $.each(data.data, (index, value) => {
+                html += `<li>>${value.introduce}</li>`
+            })
+            console.log($('.foot-top-left ul'));
+            $('.foot-top-left ul').html(html)
+        }
+    })
+</script>
