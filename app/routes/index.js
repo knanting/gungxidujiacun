@@ -1,10 +1,3 @@
-/*
- * @Description: 
- * @Author: yy2257
- * @Date: 2020-08-19 19:26:58
- * @LastEditTime: 2020-08-20 20:24:36
- * @LastEditors: yy2257
- */
 var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
