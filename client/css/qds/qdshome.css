@@ -204,11 +204,11 @@ a{
     top: 50%;
     transform: translatey(-50%);
 }
+/* 第三个板块 */
 .banx{
     width: 100%;
     height: 874px;
     display: flex;
-    /* justify-content: space-between; */
 }
 .banxa , .banxb, .banxc{
     width: 33.3%;
@@ -218,30 +218,192 @@ a{
 .banxa-a{
     width: 100%;
     height: 50%;
-    background: url('../../images/qds/wzsy-8.png');
-    display: block;
+    overflow: hidden;
+    position: relative;
 }
+.banxa-a:hover:before{
+    width: 362px;
+    font-size: 30px;
+    color: #453d3b;
+    line-height: 55px;
+    padding-left: 60px;
+    text-align: left;
+}
+.banxa-a::before{
+    content: "小暑套房";
+    background: url('../../images/qds/wzsy-18.png') no-repeat right rgba(255,255,255,0.42);
+    width: 0px;
+    height: 91px;
+    z-index: 999;
+    left: 0px;
+    top: 280px;
+    position: absolute;
+    display: block;
+    transition: ease-in-out .35s;
+    box-sizing: border-box;
+}
+
+.banxa-a img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: all 0.35s linear;
+}
+.banxa-a img:hover,.banxa-b img:hover{
+    transform: scale(1.1);
+}
+
 .banxa-b{
     width: 100%;
     height: 50%;
-    background: url('../../images/qds/wzsy-14.png');
     display: block;
+    overflow: hidden;
+    position: relative;
 }
+.banxa-b img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: all 0.35s linear;
+}
+.banxa-b::before{
+    overflow: hidden;
+    content: "小暑套房";
+    width: 0px;
+    height: 91px;
+    z-index: 999;
+    left: 0px;
+    top: 280px;
+    position: absolute;
+    display: block;
+    background: url('../../images/qds/wzsy-18.png') right center no-repeat rgba(255, 255, 255, 0.42);
+    transition: all 0.35s ease-in-out 0s;
+    box-sizing: border-box;
+}
+.banxa-b:hover:before{
+    width: 362px;
+    font-size: 30px;
+    color: #453d3b;
+    line-height: 55px;
+    padding-left: 60px;
+    text-align: left;
+}
+
 .banxb{
-    background: url('../../images/qds/wzsy-9.png');
     display:block;
+    overflow: hidden;
+    position: relative;
 }
+.banxb::before{
+    content: "云舍驿站";
+    background: url('../../images/qds/wzsy-19.png') no-repeat right rgba(255,255,255,0.72);
+    width: 0px;
+    height: 119px;
+    z-index: 999;
+    left: 0px;
+    top: 700px;
+    position: absolute;
+    display: block;
+    transition: ease-in-out .35s;
+    box-sizing: border-box;
+}
+.banxb:hover:before{
+    width: 428px;
+    font-size: 40px;
+    color: #453D3B;
+    line-height: 150px;
+    padding-left: 130px;
+    text-align: left;
+}
+.banxb img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: all 0.35s linear;
+}
+.banxb img:hover{
+    transform: scale(1.1);
+}
+
 .banxc-a{
     width: 100%;
     height: 50%;
-    background: url('../../images/qds/wzsy-10.png');
-    display: block;
+    /* background: url('../../images/qds/wzsy-10.png'); */
+    overflow: hidden;
+    position: relative;
 }
+.banxc-a img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: all 0.35s linear;
+}
+.banxc-a img:hover{
+    transform: scale(1.1);
+}
+.banxc-a:hover:before{
+    width: 362px;
+    font-size: 30px;
+    color: #453D3B;
+    line-height: 55px;
+    padding-left: 55px;
+    text-align: left;
+    box-sizing: border-box;
+}
+.banxc-a::before{
+    content: "谷雨家庭套房";
+    background: url('../../images/qds/wzsy-20.png') no-repeat right rgba(255,255,255,0.42);
+    width: 0px;
+    height: 91px;
+    z-index: 999;
+    left: 0px;
+    top: 280px;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    transition: ease-in-out .35s;
+}
+
 .banxc-b{
     width: 100%;
     height: 50%;
-    background: url('../../images/qds/wzsy-12.png');
+   overflow: hidden;
+   position: relative;
 }
+.banxc-b img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: all 0.35s linear;
+}
+.banxc-b img:hover{
+    transform: scale(1.1);
+}
+.banxc-b::before{
+    content: "白露套房";
+    background: url('../../images/qds/wzsy-21.png') no-repeat right rgba(255,255,255,0.42);
+    width: 0px;
+    height: 91px;
+    z-index: 999;
+    left: 0px;
+    top: 280px;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    transition: ease-in-out .35s;
+}
+.banxc-b:hover:before{
+    width: 362px;
+    font-size: 30px;
+    color: #453D3B;
+    line-height: 55px;
+    padding-left: 60px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+
+
 
 
 
