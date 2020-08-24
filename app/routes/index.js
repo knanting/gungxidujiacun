@@ -8,8 +8,10 @@ router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 
 /* GET home page. */
+
+// 更改了主页面接口渲染地址
 router.get('/', function(req, res, next) {
-    res.render('./foot', {});
+    res.render('./qdshome.html', {});
 });
 
 router.get('/getData', function(req, res, next) {
