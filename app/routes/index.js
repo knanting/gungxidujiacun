@@ -12,6 +12,14 @@ router.get('/', function(req, res, next) {
     res.render('./foot', {});
 });
 
+ /*接口跳转到活动庆典 */
+ router.get('/Celebration', function(req, res, next) {
+    res.render('./Celebration.html', {});
+});
+
+
+
+
 router.get('/getData', function(req, res, next) {
     if (req.query.type) {
         if (req.query.type === '*') {
@@ -22,15 +30,9 @@ router.get('/getData', function(req, res, next) {
         con.query(sql, function(err, data) {
             // console.log(data[2]);
             res.send({
-<<<<<<< HEAD
-                code:1,
-                data:data,
-                message:'succes'
-=======
                 code: 1,
                 data: data,
                 message: 'succes'
->>>>>>> 6966bc8a41177a9d8bd97b9138e73f03a768f02c
             });
         })
     } else {

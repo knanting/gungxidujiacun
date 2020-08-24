@@ -42,12 +42,12 @@
             type: '云舍驿站'
         },
         success: data => {
-            console.log(data);
+            // console.log(data);
             let html = ''
             $.each(data.data, (index, value) => {
                 html += `<li>>${value.introduce}</li>`
             })
-            console.log($('.foot-top-left ul'));
+            // console.log($('.foot-top-left ul'));
             $('.foot-top-left ul').html(html)
         }
     })
