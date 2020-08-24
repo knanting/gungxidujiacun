@@ -109,6 +109,12 @@ a{
     opacity: 0;
     transition: all 1s linear;
 }
+#view img{
+    width: 147px;
+    height: 47px;
+    vertical-align: middle;
+    border: 0;
+}
 /* 第二个板块 */
 .pursye{
     width: 100%;
@@ -400,6 +406,138 @@ a{
     padding-left: 60px;
     text-align: left;
     box-sizing: border-box;
+}
+/* 第四个板块 */
+.journalism{
+    width: 100%;
+    height: 750px;
+    background: url('../../images/qds/wzsy-22.png');
+    position: relative;
+}
+.journalism-a{
+    width: 440px;
+    height: 152px;
+    background: url('../../images/qds/wzsy-23.png');
+    position:absolute;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.inner{
+    width: 1200px;
+    height: 387px;
+    margin: 0 auto;
+    position: absolute;
+    top: 264px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.inner ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inner li{
+    width: 386px;
+    height: 375px;
+    margin: 6px;
+    position: relative;
+}
+
+.yuns{
+    width: 376px;
+    height: 375px;
+    margin: 0 5px;
+    border: 1px solid #dfdfdf;
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+   
+}
+.yuns-a{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background: rgba(0,0,0,0);
+    transition: all 0.35s linear;
+    color: #686868;
+}
+.yans_a{
+   font-size: 14px;
+   padding-top: 50px;
+   margin: 0 0 15px;
+}
+.yans_b{
+    display: block;
+    width: 284px;
+    height: 60px;
+    font-size: 18px;
+    color: #464646;
+    line-height: 1.5;
+}
+.yans_d{
+    display: block;
+    width: 284px;
+    height: 30px;
+    font-size: 14px;
+    margin: 10px 0 0;
+    overflow: hidden;
+    line-height: 2;
+    
+}
+.yans_c {
+    position: absolute;
+    left: 45px;
+    bottom: 40px;
+    font-size: 14px;
+    
+}
+.hani{
+    width: 100%;
+    height: 100%;
+   position: absolute;
+   top: -30px;
+   left: -10%;
+}
+.hani img{
+    width: 497px;
+    height:450px;
+   opacity: 0;
+    transition: all 0.35s linear;
+}
+.inner li:hover .hani img{
+  opacity: 1;
+   transform: scale(0.9);
+}
+.inner li:hover .yuns-a{
+    top: 38%;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+}.inner li:hover .yans_b{
+    color: #fff;
+}
+.ico{
+    position: absolute;
+    top: 50px;
+    left: 230px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff;
+    background: url('../../images/qds/ico.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 0.35s linear;
+    opacity: 0;
+    z-index: 99;
+}
+.inner li:hover .ico{
+    left: 290px;
+    opacity: 1;
 }
 
 

@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url('../../images/qds/ysyzbeij.jpg');
+    width: 100%;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+    color:#453d3b;
+}
+.ysyzs{
+    width: 1200px;
+    height: 142px;
+    margin: 0 auto;
+}
+.ysyz{
+    width: 1200px;
+    height: 136px;
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    position: absolute;
+    top: 744px;
+}
+.ysyz-a{
+    width: 120px;
+    height: 43px;
+    margin: 5px;
+    border: 1px solid #aaa;
+    border-radius: 25px;
+    line-height: 21px;
+}
+.ysyz-a a{
+    width: 120px;
+    height: 43px;
+ 
+}
+
+.ys-a{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+    padding: 10px 25px;
+}
+
