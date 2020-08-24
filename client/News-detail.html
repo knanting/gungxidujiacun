@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./top-foot/css/top-foot.css" />
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1919882_sokljd5tbza.css">
+    <link rel="stylesheet" href="./css/lsn/swiper.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: #707070;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      .news-detail {
+        width: 100%;
+        /* height: 1237px; */
+      }
+      .news-detail-box {
+        margin: 0 auto;
+        width: 100%;
+      }
+      .news-detail-box1 {
+        background: url("./images/lsn/yunshelvyou_42.jpg") no-repeat center
+          center;
+        background-size: auto;
+        width: inherit;
+        height: inherit;
+        padding-top: 50px;
+      }
+      .news-detail-box2 {
+        width: 517px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+      }
+      .news-detail-box2 .news-detail-Industry {
+        width: 115px;
+        height: 40px;
+        border: 1px solid #ccc;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 20px;
+        font-size: 16px;
+      }
+      .news-detail-box2 .news-detail-Yunshe {
+        width: 115px;
+        height: 40px;
+        border: 1px solid #ccc;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 20px;
+        font-size: 16px;
+      }
+      .news-detail-box2 .news-detail-Industry:hover {
+        color: #fff;
+        background-color: rgb(69, 61, 59, 1);
+      }
+      .news-detail-box2 .news-detail-Industry:hover span {
+        color: #fff;
+      }
+      .news-detail-box2 .news-detail-Yunshe:hover {
+        color: #fff;
+        background-color: rgb(69, 61, 59, 1);
+      }
+      .news-detail-box2 .news-detail-Yunshe:hover span {
+        color: #fff;
+      }
+      .news-detail-box3 {
+        width: 440px;
+        height: 152px;
+        margin: 0 auto;
+      }
+      .news-detail-pic1 {
+        width: 440px;
+        height: 152px;
+      }
+      /* 内容区 */
+      .news-detail-box4{
+          width: 1200px;
+          height: 1873px;
+          overflow: hidden;
+          margin: 0 auto;
+      }
+      .news-detail-box5{
+          width: 1200px;
+          height: auto;
+          background: transparent;
+          margin: 0;
+          padding: 0;
+          border: 1px none rgba(255, 255, 255, 1);
+
+      }
+      .news-detail-box6{
+          position: relative;
+          border: 0;
+          width: inherit;
+          height: inherit;
+          margin: 0;
+          padding: 0;
+      }
+      .news-detail-tit{
+          padding: 10px 35px 10px 35px;
+          width: inherit;
+          height: inherit;
+          margin: 0;
+          padding: 0;
+          border-width: 1px;
+          border-style: none;
+          border-color: rgba(288, 288, 288, 0);
+          overflow: hidden;
+          background-color: transparent;
+        }
+        .news-detail-tit1{
+            text-align: center;
+            height: auto;
+            background-color: rgba(179, 165, 156, 1);
+            margin: 0 auto;
+            padding: 0;
+            overflow: hidden;
+            border-color: rgba(288, 288, 288, 0);
+        }
+        .news-detail-tit2{
+            width: auto;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            border: 1px none;
+            border-color: rgba(288, 288, 288, 0);
+            overflow: hidden;
+            height: auto;
+            max-width: 85%;
+        }
+        .news-detail-title{
+            font-size: 22px;
+            color: rgba(69, 61, 59, 1);
+            text-align: center;
+            display: inline-block;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            font-weight: 400;
+            float: none;
+        }
+        .news-detail-font{
+            line-height: 38px;
+            text-align: center;
+        }
+        .news-detail-info{
+            overflow: hidden;
+            margin-top: 20px;
+            width: auto;
+            height: auto;
+            border-width: 0;
+            background-color: transparent;
+            /* margin: 0; */
+            padding: 0;
+            border-style: none;
+            border-color: rgba(228,228,228,0);
+        }
+        .news-detail-about {
+            float: left;
+            width: 100%;
+            height: auto;
+            border-width: 0;
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            border-style: none;
+            border-color: rgba(228,228,228,0);
+            overflow: hidden;
+        }
+        .news-detail-info1, .news-deatail-viewBox{
+            width: auto;
+            height: auto;
+            border-width: 0;
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            border-style: none;
+            border-color: rgba(228,228,228,0);
+            overflow: hidden;
+            float: right;
+        }
+        .news-detail-viewBox{
+            display: inline-block;
+        }
+        .viewBox{
+            /* float: right; */
+            text-align: right;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            color: #c8c8c8;
+            font-size: 12px;
+
+        }
+        .viewBox1 .news-detail-font{
+            vertical-align: middle;
+            white-space: nowrap;
+            width: inherit;
+            line-height: 16px;
+        }
+        .viewBox1{
+            vertical-align: top;
+            padding: 0 5px 0 0 ;
+            color: #969696;
+            font-size: 12px;
+            text-align: left;
+            overflow: visible;
+
+        }
+        .news-detail-line{
+            margin-top: 5px;
+            width: 100%;
+            height: 0;
+            border-top: 1px solid #ccc;
+            opacity: 1;
+        }
+        .news-detail-line1{
+            margin-top: 15px;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            width: auto;
+            height: auto;
+            margin: 0;
+            border: 1px solid rgba(228, 228, 228, 1);
+            background-color: rgba(252, 252, 252, 1);
+            font-size: 14px;
+        }
+        .news-detail-line2{
+            color: #999;
+            overflow: visible;
+            font-size: 14px;
+            
+        }
+        .news-detail-pic{
+            width: auto;
+            height: auto;
+            border-width: 0;
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            border-style: none;
+            border-color: rgba(228,228,228,0);
+            overflow: hidden;
+        }
+        .news-detail-pica{
+            border-color: rgba(204, 204, 204, 1);
+            padding: 10px;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+            width: auto;
+            height: auto;
+            border-style: solid;
+            border-width: 1px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="news-detail">
+      <div class="news-detail-box">
+        <div class="news-detail-box1">
+          <div class="news-detail-box2">
+            <div class="news-detail-Industry">
+              <a href=""><span>行业新闻</span></a>
+            </div>
+            <div class="news-detail-Yunshe">
+              <a href=""><span>云舍新闻</span></a>
+            </div>
+          </div>
+          <div class="news-detail-box3">
+            <div class="news-detail-pic">
+              <a href="">
+                <div class="news-detail-pic1">
+                  <img
+                    src="./images/lsn/yunshelcyou_27.png"
+                    alt=""
+                    title="广西云舍旅游投资有限公司"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- 内容区 -->
+          <div class="news-detail-box4">
+            <div class="news-detail-box5 news-detail-box6">
+                <div class="news-detail-tit news-detail-box6">
+                    <!-- 标题 -->
+                    <div class="news-detail-tit1 ">
+                        <div class="news-detail-tit2">
+                            <h1 class="news-detail-title">
+                                <div class="news-detail-font">
+                                    最短面试-云舍
+                                </div>
+                            </h1>
+                        </div>
+                    </div>
+                    <!-- 信息区 -->
+                    <div class="news-detail-info news-detail-box6">
+                        <div class="news-detail-about news-detail-box6">
+                        </div>
+                        <!-- 浏览量 -->
+                        <div class="news-detail-info1 news-detail-box6">
+                            <div class="news-detail-viewBox">
+                                <div class="viewBox news-detail-title">
+                                    <div class="news-deatil-font">
+                                        <i class="iconfont icon-yanjing"></i>
+                                        <span class="i_browsingVolume">
+                                            浏览量
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="viewBox1 news-detail-title">
+                                    <div class="news-detail-font">
+                                        <i class="iconfont"></i>
+                                        87
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 横线 -->
+                    <div class="news-detail-line"></div>
+                    <!--  -->
+                    <div class="news-detail-line1">
+                        <article class="news-detail-line2"></article>
+                    </div>
+                    <!-- 新闻图集 -->
+                    <div class="news-detail-pic">
+                        <!-- lunbo -->
+                        <div class="news-detail-pica">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="./images/lsn/xwzx1-1.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="./images/lsn/xwzx1-2.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="./images/lsn/xwzx1-3.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/lsn/swiper.js"></script>
+    <script>
+        var myswiper = new Swiper('.swiper-container',{
+            // effect:'cube',
+            // loop:true,
+            // autoplay:true
+        })
+    </script>
+  </body>
+</html>
