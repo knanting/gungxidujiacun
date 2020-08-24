@@ -28,7 +28,11 @@ router.get('/getData', function(req, res, next) {
         }
         con.query(sql, function(err, data) {
             // console.log(data[2]);
-            res.send(data);
+            res.send({
+                code:1,
+                data:data,
+                message:'succes'
+            });
         })
     } else {
         res.send('参数不正确');

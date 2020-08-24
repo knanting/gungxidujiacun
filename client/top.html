@@ -61,19 +61,61 @@
     </div>
 
     <div class="app">
-
+        <div class="a"></div>
+        <div class="a"></div>
+        <div class="a"></div>
+        <div class="a"></div>
+        <div class="a"></div>
+        <div class="a"></div>
+        <span class="b">1</span>
+        <span class="b">2</span>
+        <span class="b">3</span>
     </div>
     <script src="./js/jquery-3.0.0.min.js"></script>
     <script>
+        // $.ajax({
+        //     url: 'http://172.16.5.135:3000/getData',
+        //     type: 'get',
+        //     data: {
+        //         type: '新闻资讯'
+        //     },
+        //     success: (data) => {
+        //         console.log(data);
+        //         $('.app').html(data[2].content)
+        //     }
+        // })
+
         $.ajax({
-            url: 'http://172.16.5.135:3000/getData',
+            url: 'http://localhost:3000/getData',
             type: 'get',
             data: {
-                type: '新闻资讯'
+                type: '活动庆典'
             },
             success: (data) => {
                 console.log(data);
-                $('.app').html(data[2].content)
+                // $('.app').html(data[2].content)
+                var html=''
+                    data.data.forEach((item,index) => {
+                        var src=eval('('+item.imgsrc+')')
+                        html = `<img src='${src}'>`
+                        $('.a').eq(index).html(html)
+                    });
+                $('.b').on('click',function(){
+                    var start=($(this).text()-1)*6
+                    var end=$(this).text()*6-1
+                    var html1
+                    var j=0
+                    for(var i=start;i<=end;i++){
+                        if(j>5){
+                            j=0
+                        }
+                        console.log(data.data[i]);
+                        html1=`<img src='${eval('('+data.data[i].imgsrc+')')[0]}'>`
+                        $('.a').eq(j).html(html1)
+                        j++
+                    }
+                })
+                
             }
         })
     </script>
