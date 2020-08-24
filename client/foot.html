@@ -34,21 +34,19 @@
         </div>
     </div>
 </div>
-<script src="./js/jquery-3.0.0.min.js"></script>
 <script>
     $.ajax({
         url: 'http://localhost:3000/getData',
         method: 'get',
         data: {
-            type: '云舍驿站'
+            type: '云舍驿站',
+            class: '*'
         },
         success: data => {
-            console.log(data);
             let html = ''
             $.each(data.data, (index, value) => {
                 html += `<li>>${value.introduce}</li>`
             })
-            console.log($('.foot-top-left ul'));
             $('.foot-top-left ul').html(html)
         }
     })
