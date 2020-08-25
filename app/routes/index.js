@@ -17,9 +17,6 @@ router.get('/', function(req, res, next) {
     res.render('./Celebration.html', {});
 });
 
-
-
-
 router.get('/getData', function(req, res, next) {
     if (req.query.type) {
         if (req.query.type === '*') {
