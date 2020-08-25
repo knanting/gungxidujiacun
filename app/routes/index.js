@@ -18,6 +18,10 @@ router.get('/ysyz', function(req, res, next) {
     console.log(1111)
     res.render('./qdsysyz.html', {});
 });
+router.get('/gwc', function(req, res, next) {
+    console.log(1111)
+    res.render('./qdsgwc.html', {});
+});
 
 router.get('/getData', function(req, res, next) {
     if (req.query.type) {

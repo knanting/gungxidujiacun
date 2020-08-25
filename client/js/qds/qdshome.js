@@ -1,8 +1,8 @@
   $(function(){
     $(window).scroll (function(){
         var app = document.documentElement.scrollTop || document.body.scrollTop || window.pageXOffset
-        console.log(app)
-        if (app > 800 ) {
+        // console.log(app)
+        if (app > 700 ) {
             $('.zhuye_b').css({
                 left : "350px",
                 opacity : 1
@@ -35,7 +35,7 @@
    $(function(){
        $(window).scroll(function(){
            var add=document.documentElement.scrollTop ||document.body.scrollTop||window.pageXOffset
-          if(add>1500){
+          if(add>1400){
             $('.pursye_a').css({
                 top:"45.5px",
                 opacity : 1

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/qds/qdsysyz.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_1582419_49rqs7dgiie.css">
     <link rel="stylesheet" href="./top-foot/css/top-foot.css">
+    <link rel="stylesheet" href="./css/qds/qdsgwc.css">
 </head>
 
 <body>
@@ -110,7 +111,7 @@
         <div class="ysyzh">
             <img src="./images/qds/ysyzaaa.png" alt="">
         </div>
-        <!-- 第三 -->
+        <!-- 第三板块 -->
         <div class="apps">
             <div class="zuo">
                 <img src="./images/qds/1111_02.png" alt="">
@@ -123,118 +124,9 @@
             </div>
             <span>扫一扫/预定房间</span>
         </div>
-        <!-- 第四板块 -->
-        <div class="tup">
-            <ul>
-                <li>
-                    <div class="tup-a">
-                        <a href="" class="hppt"> </a>
-                        <div class="hppt-v"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="tup-a">
-                        <a href="" class="hppt"> </a>
-                        <div class="hppt-v"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="tup-a">
-                        <a href="" class="hppt"> </a>
-                        <div class="hppt-v"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="tup-a">
-                        <a href="" class="hppt"> </a>
-                        <div class="hppt-v"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="tup-a">
-                        <a href="" class="hppt"> </a>
-                        <div class="hppt-v"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="tup-a">
-                        <a href="" class="hppt"> </a>
-                        <div class="hppt-v"></div>
-                    </div>
-                </li>
-            </ul>
-            <div class="tup-s">
-                <div class="tup-s_a">
-                    <div class="pass-a">上一页</div>
-                    <div class="pass pass-in">1</div>
-                    <div class="pass">2</div>
-                    <div class="pass">3</div>
-                    <div class="pass-b">下一页</div>
-                </div>
-            </div>
-
-        </div>
-
-
     </div>
     <script src="./js/qds/jquery.js"></script>
-    <script src="./js/qds/qdsysyz.js"></script>
-    <!-- <script>
-
-        $(function () {
-
-            $.ajax({
-                url: 'http://localhost:3000/getData',
-                method: 'get',
-                data: {
-                    type: '云舍驿站',
-                    class: '*'
-                },
-
-                success: function (data) {
-                    var texts = ["立冬套房", "立春套房", "大雪家庭套房", "大树屋", "春分套房", "小暑套房",]
-                    var textv = ["雨水套房", "小雪套房", "小树屋", "小满套房", "夏至标双套房", "立夏套房",]
-                    var texto = ["秋分套房", "立秋套房", "芒种套房", "寒露套房", "谷雨家庭套房", "白露套房",]
-                    var html = ''
-                    for (var i = 0; i < 6; i++) {
-                        var apps = eval('(' + data.data[i].imgsrc + ')')
-                        html = `<img src='${apps[0]}'>`
-                        $('.hppt').eq(i).html(html)
-
-                    }
-                    $('.pass').on('click', function () {
-                        var ppt = parseInt($(this).text())
-                        var bb = 0
-
-                        for (var i = 6 * (ppt - 1); i < 6 * ppt; i++) {
-                            var apps = eval('(' + data.data[i].imgsrc + ')')
-                            html = `<img src='${apps[0]}'>`
-                            $('.hppt').eq(bb).html(html)
-                            bb++
-                        }
-                        if (ppt === 1) {
-                            for (var i = 0; i < textv.length; i++) {
-                                $('.hppt-v').eq(i).text(textv[i])
-                            }
-                        }
-                        if(ppt === 2){
-                            for (var i = 0; i < texts.length; i++) {
-                                $('.hppt-v').eq(i).text(texts[i])
-                            }
-                        }
-                        if (ppt === 3) {
-                            for (var i = 0; i < texto.length; i++) {
-                                $('.hppt-v').eq(i).text(texto[i])
-                            }
-                        }
-                    })
-                }
-
-
-            })
-
-        })
-    </script> -->
+    <script src="./js/qds/qdsgwc.js"></script>
     <!-- 底部 -->
     <%-include('./foot.html')%>
 </body>

@@ -69,7 +69,7 @@ a{
 /* 第三 */
 .apps{
     width: 1200px;
-    height: 300px;
+    height: 200px;
     margin: 0 auto;
     position: relative;
 }
@@ -104,38 +104,90 @@ a{
    left: 50%;
    transform: translate(-50%);
 }
+/* 第四板块 */
 .tup{
-    width: 1200px;
-    height: 576px;
+    width: 1301px;
+    height: 700px;
     margin: 0 auto;
     
 }
 .tup ul{
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .tup li{
     width: calc((100% - 60px)/3);
     float: left;
     margin: 10px;
-    background-color: tomato;
     height: 250px;
+    margin-bottom: 20px;
+    
 }
-figure{
-    background-color: #eee;
-    height: auto;
+.tup-a{
+    box-sizing: border-box;
+    margin: 12px 40px;
+}
+.tup-a div{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.tup-a img{
     display: block;
-    line-height: normal;
-    overflow: hidden;
-    position: relative;
+    width: 100%;
+    height: auto;
 }
-.aa{
+.tup-s{
+    width: 100%;
+    height: 90px;
+   
+}
+.tup-s_a{
+margin: 30px 50px 30px 0;
+float: right;
+}
+
+
+.pass,.pass-a,.pass-b{
    width: 50px;
    height: 30px;
-   background: violet;
    margin: 5px;
    color: #000;
-   font-size: 20px;
    float: left;
 }
+ .pass{
+    height: 30px;
+    width: 30px;
+    color: rgba(102, 102, 102, 1);
+    border-width: 0;
+    border-style: solid;
+    border-color: rgba(255,255,255,0);
+    background-color: rgba(242, 242, 242, 1);
+    text-align: center;
+    line-height: 30px;
+  
+}
+.pass-in{
+    background: #453D3B!important;
+    color: #fff;
+}
+.tup-s_a .pass-a,.tup-s_a .pass-b{
+    height: 30px;
+    color: rgba(102, 102, 102, 1);
+    border-width: 0;
+    border-style: solid;
+    border-color: rgba(255,255,255,0);
+    background-color: rgba(242, 242, 242, 1);
+    text-align: center;
+    padding-top: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 12px;
+    line-height: 30px;
+}
+.tup-s_a .pass-b{
+    background: #453D3B!important;
+    color: #fff;
+}
+
 
 
