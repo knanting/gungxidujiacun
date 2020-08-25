@@ -57,6 +57,7 @@ fun()
       fun()
     });
   });
+  
   var index1=1;
   $(document).ready(function () {
     $(".news-pre").on("click", function () {
