@@ -241,18 +241,18 @@
     margin-right: 5px;
     float: left;
     display: inline-table;
-    cursor: pointer;
   }
   .news-pre1{
-      color: rgba(255, 255, 255, 1) !important;
+    color: rgba(255, 255, 255, 1) !important;
+    cursor: no-drop;
       background: #c8c8c8 !important;
   }
-  .news-pagebox .news-pre:hover{
+  /* .news-pagebox .news-pre:hover{
     background: #453d3b !important;
     transition: all .4s ease-in-out 0s;
-    cursor:pointer;
+    cursor:auto;
     pointer-events: none;
-  }
+  } */
   .news-pagebox div {
     float: left;
     margin-left: 2px;

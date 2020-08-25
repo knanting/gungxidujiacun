@@ -11,6 +11,9 @@ router.use(bodyParser.json());
 router.get('/', function(req, res, next) {
     res.render('./news', {});
 });
+router.get('/a', function(req, res, next) {
+    res.render('./Celebration', {});
+});
 
 router.get('/getData', function(req, res, next) {
     if (req.query.type) {

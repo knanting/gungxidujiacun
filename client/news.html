@@ -25,7 +25,7 @@
               <a href="">
                 <div class="news-pic1">
                   <img
-                    src="./images/lsn/yunshelvyou_42.jpg"
+                    src="./images/lsn/yunshelcyou_27.png"
                     alt=""
                     title="广西云舍旅游投资有限公司"
                   />
@@ -39,24 +39,12 @@
             </div>
             <div class="news-page">
               <div class="news-pagebox">
-                <div class="news-pre news-pre1">
-                  <div class="news-font">
-                    <i class="news-ico"></i>
-                    <span class="news-ipre">上一页</span>
-                  </div>
-                </div>
+                <div class="news-pre news-pre1 ">上一页</div>
                 <div class="news-pagenum active">1</div>
                 <div class="news-pagenum">2</div>
-                <div class="news-pagenum1">
-                  <sapn class="news-icon1">...</sapn>
-                </div>
+                <div class="news-pagenum">3</div>
                 <div class="news-pagenum">4</div>
-                <div class="news-next">
-                  <div class="news-font">
-                    <i class="news-ico"></i>
-                    <span class="news-inext">下一页</span>
-                  </div>
-                </div>
+                <div class="news-next news-font ">下一页</div>
               </div>
             </div>
           </div>
@@ -65,43 +53,6 @@
     </div>
     <%-include('foot.html')%>
     <script src="./js/jquery-3.0.0.min.js"></script>
-    <script>
-      $.ajax({
-        url: "http://localhost:3000/getData",
-        method: "get",
-        data: {
-          type: "新闻资讯",
-          class:"*"
-        },
-        success: (data) => {
-          let html = "";
-          let start = ($(".active").text() - 1) * 6;
-          let end = $(".active").text() * 6 - 1;
-          for (let i = start; i <= end; i++) {
-            let imgsrc = eval('('+data.data[i].imgsrc+')')
-            let src = (html += `<li>
-                  <div class="bodr">
-                    <div class="pic">
-                      <img src="${imgsrc[0]}" alt="" />
-                    </div>
-                    <a href="" class="txts">
-                      <p class="sy">${data.data[i].type}</p>
-                      <p class="noeti">${data.data[i].title}</p>
-                      <p class="tx"></p>
-                      <p class="date">${data.data[i].releasedata.substring(0,10)}</p>
-                    </a>
-                    <a href="" class="ixmore">
-                      <i class="ico"></i>
-                    </a>
-                  </div>
-                  </li>`);
-          }
-          // $.each(data.data, (index, value) => {
-          // })
-          // console.log($(".inner ul"));
-          $(".inner ul").html(html);
-        },
-      });
-    </script>
+    <script src="./js/lsn/news.js"></script>
   </body>
 </html>
