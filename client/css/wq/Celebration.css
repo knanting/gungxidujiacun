@@ -40,7 +40,8 @@
 
 /* 外框 */
 
-.Celebration-content {
+.Celebration-content ,
+.Celebration-wrap{
     width: 1240px;
     margin: 0 auto;
 }

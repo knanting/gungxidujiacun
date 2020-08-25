@@ -10,19 +10,22 @@ $.ajax({
         var html = ''
 
         // 初始页面添加图片
-        console.log(Math.ceil((data.data.length)/6))
-        
         data.data.forEach((item, index) => {
+            console.log(item ,index)
 
             var src = eval('(' + item.imgsrc + ')')
 
             html = `
+            <div class="Celebration-CCont">
             <h2 class="Celebration-CCTitle">${item.type}</h2>
             <img class="Celebration-CCTPic" src='${src}'>
+            </div>
             `
 
-            $('.Celebration-CCont').eq(index).html(html)
+            $('.Celebration-wrap').html(html)
         });
+
+
 
         $('.Celebration-Plist').on('click', function () {
 
