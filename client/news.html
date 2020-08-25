@@ -71,15 +71,14 @@
         method: "get",
         data: {
           type: "新闻资讯",
+          class:"*"
         },
         success: (data) => {
-          console.log(data);
           let html = "";
           let start = ($(".active").text() - 1) * 6;
           let end = $(".active").text() * 6 - 1;
           for (let i = start; i <= end; i++) {
-            let imgsrc=eval('('+data.data[i].imgsrc+')')
-            console.log(imgsrc);
+            let imgsrc = eval('('+data.data[i].imgsrc+')')
             let src = (html += `<li>
                   <div class="bodr">
                     <div class="pic">
@@ -99,7 +98,7 @@
           }
           // $.each(data.data, (index, value) => {
           // })
-          console.log($(".inner ul"));
+          // console.log($(".inner ul"));
           $(".inner ul").html(html);
         },
       });

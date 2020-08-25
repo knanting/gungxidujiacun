@@ -5,265 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./top-foot/css/top-foot.css" />
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1919882_sokljd5tbza.css">
-    <link rel="stylesheet" href="./css/lsn/swiper.css">
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      a {
-        text-decoration: none;
-        color: #707070;
-      }
-      ul,
-      li {
-        list-style: none;
-      }
-      .news-detail {
-        width: 100%;
-        /* height: 1237px; */
-      }
-      .news-detail-box {
-        margin: 0 auto;
-        width: 100%;
-      }
-      .news-detail-box1 {
-        background: url("./images/lsn/yunshelvyou_42.jpg") no-repeat center
-          center;
-        background-size: auto;
-        width: inherit;
-        height: inherit;
-        padding-top: 50px;
-      }
-      .news-detail-box2 {
-        width: 517px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
-      }
-      .news-detail-box2 .news-detail-Industry {
-        width: 115px;
-        height: 40px;
-        border: 1px solid #ccc;
-        line-height: 40px;
-        text-align: center;
-        border-radius: 20px;
-        font-size: 16px;
-      }
-      .news-detail-box2 .news-detail-Yunshe {
-        width: 115px;
-        height: 40px;
-        border: 1px solid #ccc;
-        line-height: 40px;
-        text-align: center;
-        border-radius: 20px;
-        font-size: 16px;
-      }
-      .news-detail-box2 .news-detail-Industry:hover {
-        color: #fff;
-        background-color: rgb(69, 61, 59, 1);
-      }
-      .news-detail-box2 .news-detail-Industry:hover span {
-        color: #fff;
-      }
-      .news-detail-box2 .news-detail-Yunshe:hover {
-        color: #fff;
-        background-color: rgb(69, 61, 59, 1);
-      }
-      .news-detail-box2 .news-detail-Yunshe:hover span {
-        color: #fff;
-      }
-      .news-detail-box3 {
-        width: 440px;
-        height: 152px;
-        margin: 0 auto;
-      }
-      .news-detail-pic1 {
-        width: 440px;
-        height: 152px;
-      }
-      /* 内容区 */
-      .news-detail-box4{
-          width: 1200px;
-          height: 1873px;
-          overflow: hidden;
-          margin: 0 auto;
-      }
-      .news-detail-box5{
-          width: 1200px;
-          height: auto;
-          background: transparent;
-          margin: 0;
-          padding: 0;
-          border: 1px none rgba(255, 255, 255, 1);
-
-      }
-      .news-detail-box6{
-          position: relative;
-          border: 0;
-          width: inherit;
-          height: inherit;
-          margin: 0;
-          padding: 0;
-      }
-      .news-detail-tit{
-          padding: 10px 35px 10px 35px;
-          width: inherit;
-          height: inherit;
-          margin: 0;
-          padding: 0;
-          border-width: 1px;
-          border-style: none;
-          border-color: rgba(288, 288, 288, 0);
-          overflow: hidden;
-          background-color: transparent;
-        }
-        .news-detail-tit1{
-            text-align: center;
-            height: auto;
-            background-color: rgba(179, 165, 156, 1);
-            margin: 0 auto;
-            padding: 0;
-            overflow: hidden;
-            border-color: rgba(288, 288, 288, 0);
-        }
-        .news-detail-tit2{
-            width: auto;
-            display: inline-block;
-            margin: 0;
-            padding: 0;
-            border: 1px none;
-            border-color: rgba(288, 288, 288, 0);
-            overflow: hidden;
-            height: auto;
-            max-width: 85%;
-        }
-        .news-detail-title{
-            font-size: 22px;
-            color: rgba(69, 61, 59, 1);
-            text-align: center;
-            display: inline-block;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-            font-weight: 400;
-            float: none;
-        }
-        .news-detail-font{
-            line-height: 38px;
-            text-align: center;
-        }
-        .news-detail-info{
-            overflow: hidden;
-            margin-top: 20px;
-            width: auto;
-            height: auto;
-            border-width: 0;
-            background-color: transparent;
-            /* margin: 0; */
-            padding: 0;
-            border-style: none;
-            border-color: rgba(228,228,228,0);
-        }
-        .news-detail-about {
-            float: left;
-            width: 100%;
-            height: auto;
-            border-width: 0;
-            margin: 0;
-            padding: 0;
-            background-color: transparent;
-            border-style: none;
-            border-color: rgba(228,228,228,0);
-            overflow: hidden;
-        }
-        .news-detail-info1, .news-deatail-viewBox{
-            width: auto;
-            height: auto;
-            border-width: 0;
-            margin: 0;
-            padding: 0;
-            background-color: transparent;
-            border-style: none;
-            border-color: rgba(228,228,228,0);
-            overflow: hidden;
-            float: right;
-        }
-        .news-detail-viewBox{
-            display: inline-block;
-        }
-        .viewBox{
-            /* float: right; */
-            text-align: right;
-            display: inline-block;
-            margin: 0;
-            padding: 0;
-            color: #c8c8c8;
-            font-size: 12px;
-
-        }
-        .viewBox1 .news-detail-font{
-            vertical-align: middle;
-            white-space: nowrap;
-            width: inherit;
-            line-height: 16px;
-        }
-        .viewBox1{
-            vertical-align: top;
-            padding: 0 5px 0 0 ;
-            color: #969696;
-            font-size: 12px;
-            text-align: left;
-            overflow: visible;
-
-        }
-        .news-detail-line{
-            margin-top: 5px;
-            width: 100%;
-            height: 0;
-            border-top: 1px solid #ccc;
-            opacity: 1;
-        }
-        .news-detail-line1{
-            margin-top: 15px;
-            margin-bottom: 20px;
-            padding: 5px 10px;
-            width: auto;
-            height: auto;
-            margin: 0;
-            border: 1px solid rgba(228, 228, 228, 1);
-            background-color: rgba(252, 252, 252, 1);
-            font-size: 14px;
-        }
-        .news-detail-line2{
-            color: #999;
-            overflow: visible;
-            font-size: 14px;
-            
-        }
-        .news-detail-pic{
-            width: auto;
-            height: auto;
-            border-width: 0;
-            margin: 0;
-            padding: 0;
-            background-color: transparent;
-            border-style: none;
-            border-color: rgba(228,228,228,0);
-            overflow: hidden;
-        }
-        .news-detail-pica{
-            border-color: rgba(204, 204, 204, 1);
-            padding: 10px;
-            margin-bottom: 30px;
-            box-sizing: border-box;
-            width: auto;
-            height: auto;
-            border-style: solid;
-            border-width: 1px;
-        }
-    </style>
+    <link
+      rel="stylesheet"
+      href="http://at.alicdn.com/t/font_1919882_sokljd5tbza.css"
+    />
+    <link rel="stylesheet" href="./css/lsn/swiper.css" />
+    <link rel="stylesheet" href="./css/lsn/news-detail.css" />
   </head>
   <body>
     <div class="news-detail">
@@ -293,61 +40,181 @@
           <!-- 内容区 -->
           <div class="news-detail-box4">
             <div class="news-detail-box5 news-detail-box6">
-                <div class="news-detail-tit news-detail-box6">
-                    <!-- 标题 -->
-                    <div class="news-detail-tit1 ">
-                        <div class="news-detail-tit2">
-                            <h1 class="news-detail-title">
-                                <div class="news-detail-font">
-                                    最短面试-云舍
-                                </div>
-                            </h1>
-                        </div>
-                    </div>
-                    <!-- 信息区 -->
-                    <div class="news-detail-info news-detail-box6">
-                        <div class="news-detail-about news-detail-box6">
-                        </div>
-                        <!-- 浏览量 -->
-                        <div class="news-detail-info1 news-detail-box6">
-                            <div class="news-detail-viewBox">
-                                <div class="viewBox news-detail-title">
-                                    <div class="news-deatil-font">
-                                        <i class="iconfont icon-yanjing"></i>
-                                        <span class="i_browsingVolume">
-                                            浏览量
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="viewBox1 news-detail-title">
-                                    <div class="news-detail-font">
-                                        <i class="iconfont"></i>
-                                        87
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 横线 -->
-                    <div class="news-detail-line"></div>
-                    <!--  -->
-                    <div class="news-detail-line1">
-                        <article class="news-detail-line2"></article>
-                    </div>
-                    <!-- 新闻图集 -->
-                    <div class="news-detail-pic">
-                        <!-- lunbo -->
-                        <div class="news-detail-pica">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="./images/lsn/xwzx1-1.jpg" alt=""></div>
-                                    <div class="swiper-slide"><img src="./images/lsn/xwzx1-2.jpg" alt=""></div>
-                                    <div class="swiper-slide"><img src="./images/lsn/xwzx1-3.jpg" alt=""></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              <div class="news-detail-tit news-detail-box6">
+                <!-- 标题 -->
+                <div class="news-detail-tit1">
+                  <div class="news-detail-tit2">
+                    <h1 class="news-detail-title">
+                      <div class="news-detail-font">
+                        最短面试-云舍
+                      </div>
+                    </h1>
+                  </div>
                 </div>
+                <!-- 信息区 -->
+                <div class="news-detail-info news-detail-box6">
+                  <div class="news-detail-about news-detail-box6"></div>
+                  <!-- 浏览量 -->
+                  <div class="news-detail-info1 news-detail-box6">
+                    <div class="news-detail-viewBox">
+                      <div class="viewBox news-detail-title">
+                        <div class="news-deatil-font">
+                          <i class="iconfont icon-yanjing"></i>
+                          <span class="i_browsingVolume">
+                            浏览量
+                          </span>
+                        </div>
+                      </div>
+                      <div class="viewBox1 news-detail-title">
+                        <div class="news-detail-font">
+                          <i class="iconfont"></i>
+                          87
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 横线 -->
+                <div class="news-detail-line"></div>
+                <!--  -->
+                <div class="news-detail-line1">
+                  <article class="news-detail-line2"></article>
+                </div>
+                <!-- 新闻图集 -->
+                <div class="news-detail-pic">
+                  <!-- lunbo -->
+                  <div class="news-detail-pica">
+                    <div class="swiper-container">
+                      <!-- 图片 -->
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="./images/lsn/xwzx1-1.jpg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="./images/lsn/xwzx1-2.jpg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="./images/lsn/xwzx1-3.jpg" alt="" />
+                        </div>
+                      </div>
+                      <!-- 左右按钮 -->
+                      <div class="news-detail-pre">
+                        <div class="swiper-button-prev"></div>
+                      </div>
+                      <div class="news-detail-next">
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 文章 -->
+                  <article class="news-detail-html">
+                    <div class="news-detail-style">
+                      <div class="news-detail-rest">
+                        <div>
+                          前段时间，我们面试了一些小伙伴，其中一位面试前台的姑娘，我们大管家芳芳当时没空，让我面试这位小姑娘的。我让这位姑娘到茶室上面来，一会儿在茶室面试就好，芳芳说等她忙完手上的事再带姑娘上来，我说，你告诉她茶室在无想院里，怎么上来就可以了。结果，还是芳芳带上来的。
+                        </div>
+                        <div>&nbsp;</div>
+                        <div>
+                          &nbsp;&nbsp;
+                          那天起来我先忙了点其他事情，还没过茶室，所以茶室门没开。我当时左手抱着笔记本电脑，还有两本书一个笔记本和笔袋，右手拿着一个水杯，和钥匙。右手开门，东西有点多，把右手水杯放到左手，以便更好打开门。此时姑娘站在我的右手边。进入茶室后，我去把所有的窗打开，我让姑娘帮我把后门打开，她扭了一下，问我，哎，怎么开啊？我没有马上回答，她又转了几下，往里又往外推，打开了。等我开完窗转过身，姑娘此时已坐好在椅子上。我说我今天还没来得及搞卫生，茶桌还没擦，要不麻烦你一下，先帮我擦一下桌子，我说完后，姑娘定定坐着，没反应，我又说了一下，我说要不你先帮我擦一下这个茶桌，抹布就在那，我一边说，一边用手指引，姑娘背对着我，没有转身，没有看我，还是没反应，然后，突然站起来，很理直气壮地对我说，我是来面试的，你为什么叫我擦桌子？我说我知道你是来面试的啊，我没来得及擦，你先帮我擦一下这个茶桌嘛，我们在这面试；我面试为什么要擦桌子，她开始生气地说；我说，如果擦桌子在面试这个环节里呢？她说我没办法接受，面试，凭什么叫我擦桌子？我说，嗯，以后前台的工作也是包含收拾水舍的，她说我接受不了，转身走了。
+                        </div>
+                        <div>&nbsp;</div>
+                        <div>微信图片_20200525132915.jpg</div>
+                        <div>&nbsp;</div>
+                        <div>
+                          &nbsp;&nbsp;
+                          姑娘回去了，我给芳芳发了条微信，我说面试结束了，姑娘已经了；芳芳很惊讶，问为什么，我说，不适合你用，不适合云舍，何必招进来。
+                        </div>
+                        <div>&nbsp;</div>
+                        <div>mmexport1590195706642.jpg</div>
+                        <div>&nbsp;</div>
+                        <div>图片拍摄 | 客人老嘢</div>
+                        <div>&nbsp;</div>
+                        <div>
+                          &nbsp;&nbsp;
+                          我对于服务的理解，在于，不是服务他人，是做好自己。当觉得是服务他人时，会带有不情愿、心不甘，或者有目的性、或者当成是一份工作去敷衍。我高中好朋友跟我分享过一句话，这几年一直在鞭笞着我“再傻的人，都有感知真诚的能力。”是的，应付式，表面化的服务形式，他人是无法感受到真诚的，这样的一种相处方式，双方的内心都处于一种不满意的状态，只是因为短暂，自己是否有觉知又是否把这不满表达出来罢了；然而，真诚的服务，一定是双方都非常舒服的，彼此间的愉悦是从心里生起的。而真诚的服务，从哪里来？来自于一个人真正善良的心，来自于此生的个人修养。
+                        </div>
+                        <div>&nbsp;</div>
+                        <div>mmexport1590195453296.jpg</div>
+                        <div>&nbsp;</div>
+                        <div>图片拍摄 | 客人老嘢</div>
+                        <div>&nbsp;</div>
+                        <div>
+                          &nbsp;&nbsp;
+                          如果在这里，连路都找不到，很难安排事情让其独立解决；我手里拿着这么多东西开门，却没有想到过帮一把手，如何能想到以后会主动用心为客人搭把手提行李；擦一下桌子，哪怕只是帮忙，顺手之小事，何不为之，又如何能指望以后能把前台水舍收拾干净整洁，为客人们提供一个舒适的环境；对面试人员的态度之强硬，我又怎敢奢求以后会善待回到云舍的家人？
+                        </div>
+                        <div>&nbsp;</div>
+                        <div>
+                          mmexport1590195392850.jpg
+                        </div>
+                        <div>&nbsp;</div>
+                        <div>图片拍摄 | 客人老嘢</div>
+                        <div>&nbsp;</div>
+                        <div>
+                          &nbsp;&nbsp;
+                          一个人的品行，是在每一天每一分每一秒里流露的，不是特定的时候装出来的。所以，你是什么样的人，就会有什么样的服务。装出来的，绝不持久，且终归是装的。提升自我的个人修养，做最舒服自然的自己，才能在言语里对他人有所关照，在行为举止里对他人有所呵护。
+                        </div>
+                        <div>&nbsp;</div>
+                        <div>
+                          mmexport1590195577509.jpg
+                        </div>
+                        <div>&nbsp;</div>
+                        <div>图片拍摄 | 客人老嘢</div>
+                        <div>&nbsp;</div>
+                        <div>
+                          &nbsp;&nbsp;
+                          我们需要的，是有纯净的心，善良的品性，用心善待每一位回家的家人的伙伴。我们给予回到云舍家人的，是真诚而真实的我们，在这里，没有欺骗，没有敌意，只有包容、接纳、爱与真心以待。我们会努力，做这样的云舍人，以遇到更多回到云舍安放身心的家人们。
+                        </div>
+                        <div>&nbsp;</div>
+                        <div>
+                          mmexport1589067519379.jpg
+                        </div>
+                        <div>&nbsp;</div>
+                        <div>
+                          &nbsp;&nbsp;
+                          致歉所有在云舍有过不良体验的家人，深深致歉，愿您们能让我们再次相聚！感恩一直支持云舍的家人们，感恩您们的包容，感恩您们的鼓励！
+                        </div>
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+                        <div>&nbsp;我们在云舍，在似水年华里，候您归家</div>
+                        <div>愿所有人夏日清凉，心生愉悦，一切安好！</div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="news-detail-assit"></div>
+                <div class="news-detail-line2"></div>
+                <!--  -->
+                <div class="e_box e_box-000 p_PrevAndNext">
+                  <div class="e_box e_box-000 p_previewBox">
+                    <div class="e_title e_name-001 p_nameD">
+                      <div class="font">
+                        <i class="iconfont"></i
+                        ><span class="i_pageChangeUpTitle">上一篇：</span>
+                      </div>
+                    </div>
+                    <div class="e_title e_MinorLink-001 p_PreviewTitle">
+                      <div class="font"><i class="iconfont"></i>无</div>
+                    </div>
+                  </div>
+                  <div class="e_box e_box-000 p_nextBox">
+                    <a href="/news/82.html" class="e_link e_link-000 p_LinkD">
+                      <div class="e_title e_MinorLink-001 p_PreviewTitle">
+                        <div class="font">
+                          <i class="iconfont"></i
+                          >当世界开始复苏，你需要这份来自云舍度假村的诚挚邀约
+                        </div>
+                      </div>
+                    </a>
+                    <div class="e_title e_name-001 p_nameE">
+                      <div class="font">
+                        <i class="iconfont"></i
+                        ><span class="i_pageChangeDownTitle">下一篇：</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -355,11 +222,15 @@
     </div>
     <script src="./js/lsn/swiper.js"></script>
     <script>
-        var myswiper = new Swiper('.swiper-container',{
-            // effect:'cube',
-            // loop:true,
-            // autoplay:true
-        })
+      var myswiper = new Swiper(".swiper-container", {
+        // effect:'cube',
+        loop: true,
+        autoplay: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
     </script>
   </body>
 </html>
