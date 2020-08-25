@@ -27,7 +27,7 @@ $.ajax({
         $('.Celebration-Plist').on('click', function () {
 
             var start = ($(this).text() - 1) * 6;
-            var end = $(this).text() * 6 - 1 - (($(this).text() * 6 - 1)-data.data.length + 1);
+            var end = $(this).text() * 6 - 1 ;
             
             var html1;
             var j = 0;
