@@ -13,6 +13,11 @@ router.use(bodyParser.json());
 router.get('/', function(req, res, next) {
     res.render('./qdshome.html', {});
 });
+// 云社驿站接口
+router.get('/ysyz', function(req, res, next) {
+    console.log(1111)
+    res.render('./qdsysyz.html', {});
+});
 
 router.get('/getData', function(req, res, next) {
     if (req.query.type) {
