@@ -27,23 +27,26 @@ $.ajax({
         $('.Celebration-Plist').on('click', function () {
 
             var start = ($(this).text() - 1) * 6;
-            var end = $(this).text() * 6 - 1 ;
+            if($(this).text() == Math.ceil((data.data.length)/6)){
+                var end = data.data.length-1
+            }else{
+                var end = $(this).text() * 6 - 1 ;
+            }
+            console.log(start , end);
             
-            var html1;
-            var j = 0;
+            var html1='';
 
             for (var i = start; i <= end; i++) {
                
-                if (j > 5) {
-                    j = 0
-                }
 
-                html1 = `
+                html1 += `
+                <div class="Celebration-CCont">
                  <h2 class="Celebration-CCTitle">${data.data[i].type}</h2>
                   <img class="Celebration-CCTPic" src='${eval('(' + data.data[i].imgsrc + ')')}'>
+                  </div>
                  `
 
-                $('.Celebration-CCont').eq(j).html(html1)
+                $('.Celebration-wrap').html(html1)
                 // 添加移除类名
                 $('.Celebration-Plist').removeClass('Celebration-PLcolor').eq($('.Celebration-Plist').index(this)).addClass('Celebration-PLcolor')
                 // 上一页下一页样式shezhi
@@ -55,8 +58,6 @@ $.ajax({
                     $('.Celebration-PPrevious').removeClass('Celebration-PPRpublic')
                     $('.Celebration-PNext').css('cursor', 'pointer')
                 }
-
-                j++
             }
 
         })
