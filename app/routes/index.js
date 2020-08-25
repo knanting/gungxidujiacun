@@ -9,7 +9,7 @@ router.use(bodyParser.json());
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('./qq', {});
+    res.render('./top', {});
 });
 
 router.get('/getData', function(req, res, next) {
@@ -71,7 +71,6 @@ router.get('/getDetails', function(req, res, next) {
             message: 'error'
         })
     }
-
 })
 
 
