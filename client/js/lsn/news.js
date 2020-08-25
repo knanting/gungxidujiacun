@@ -30,8 +30,7 @@ function fun(){
                       <i class="ico"></i>
                     </a>
                   </div>
-                  </li>`);
-                  
+                  </li>`);    
           }
           $(".inner ul").html(html);
         },
@@ -45,20 +44,34 @@ fun()
       fun()
     });
   });
-  // $(document).ready(function () {
-  //   $(".news-pagenum").on("click", function () {
-  //     $(this).addClass("active").siblings().removeClass("active");
-  //     fun()
-  //   });
-  // });
-//   $('.Celebration-content').on('click', '.Celebration-PPrevious', function () {
-//     j--;
-//     if (j >= 2 && j < Math.ceil((data.data.length) / 6)) {
-//         // 第二个添加样式
-//         $('.Celebration-Plist').removeClass('Celebration-PLcolor').eq(1).addClass('Celebration-PLcolor');
-//         // 移除上一页的样式
-//         $('.Celebration-PPrevious').removeClass('Celebration-PPRpublic');
-//         $('.Celebration-PNext').css('cursor', 'pointer');
-//     }
+  //下一页
+  var index=0;
+  $(document).ready(function () {
+    $(".news-next").on("click", function () {
+      index++;
+      if(index>3){
+        index=0;
+      }
+      $('.news-pagenum').eq(0).text(1)
+      $('.news-pagenum').eq(index).addClass("active").siblings().removeClass("active")
+      fun()
+    });
+  });
+  var index1=1;
+  $(document).ready(function () {
+    $(".news-pre").on("click", function () {
+      
+      if(index1 = 0){
+        $('.news-pre').disabled=true;
 
-// })
+      }
+      index1++;
+      $('.news-pre1').css({cursor :'pointer',background:'#453d3b'})
+      if(index1>3){
+        index1=1;
+      }
+      $('.news-pagenum').eq(0).text(1)
+      $('.news-pagenum').eq(index).addClass("active").siblings().removeClass("active")
+      fun()
+    });
+  });

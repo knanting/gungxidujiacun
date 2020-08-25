@@ -245,7 +245,8 @@
   .news-pre1{
     color: rgba(255, 255, 255, 1) !important;
     cursor: no-drop;
-      background: #c8c8c8 !important;
+    
+      background: #c8c8c8 ;
   }
   /* .news-pagebox .news-pre:hover{
     background: #453d3b !important;
