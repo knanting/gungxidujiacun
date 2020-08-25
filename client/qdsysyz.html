@@ -176,16 +176,16 @@
                     type: '云舍驿站'
                 },
                 success: function (data) {
-                    // console.log(data.data.imgsrc)
-                    // console.log(data.data)
-                    data.data.forEach(function(item ,index){
-                    //    console.log(item)
-                    // 便利出数组  console.log(item.imgsrc)
-                    console.log(item.imgsrc)
-                    //    var app =item.imgsrc
-                       $.each(item.imgsrc,(apps,value)=>{
-                           console.log(1)
-                       })
+                    data.data.forEach(function (item, index) {
+                        console.log(item.imgsrc)
+                        var apps = item.imgsrc
+                        var html = ''
+                        // $.each(apps, (vues, value) => {
+                        //     console.log(1)
+                        // }
+                        for (var i=0 ;i<apps.lenght;i++) {
+                          console.log(1111111)
+                        }
                     })
                     // $('.http')
                 }
