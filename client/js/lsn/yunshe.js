@@ -19,7 +19,7 @@ function fun() {
                     <div class="pic">
                       <img src="${imgsrc[0]}" alt="">
                     </div>
-                    <a href="" class="txts">
+                    <a href="/c" class="txts">
                       <p class="sy">${data.data[i].newsclass}</p>
                       <p class="noeti">${data.data[i].title}</p>
                       <p class="tx"></p>
