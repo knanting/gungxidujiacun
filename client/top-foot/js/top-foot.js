@@ -1,5 +1,4 @@
 $(function() {
-    // if(document.cookie)
     if ($.cookie('name')) {
         $('.login i').hide()
         $('.login a').text($.cookie('name'))
