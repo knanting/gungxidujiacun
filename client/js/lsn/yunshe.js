@@ -11,16 +11,16 @@ function fun() {
       let start = ($(".active").text() - 1) * 6;
       let end = $(".active").text() * 6 - 1;
       for (let i = start; i <= end; i++) {
-        // console.log(data.data[i]);
+        console.log(data.data[i]);
         let imgsrc = eval("(" + data.data[i].imgsrc + ")");
-        console.log(imgsrc);
+        // console.log(data.data);
         let src = (html += `<li>
                   <div class="bodr">
                     <div class="pic">
-                      <img src="${imgsrc[0]}" alt="" />
+                      <img src="${imgsrc[0]}" alt="">
                     </div>
                     <a href="" class="txts">
-                      <p class="sy">${data.data[i].type}</p>
+                      <p class="sy">${data.data[i].newsclass}</p>
                       <p class="noeti">${data.data[i].title}</p>
                       <p class="tx"></p>
                       <p class="date">${data.data[i].releasedata.substring(
