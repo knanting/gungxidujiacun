@@ -66,6 +66,14 @@ router.get('/getDetailsByTitle', function(req, res, next) {
                     message: 'error'
                 })
             } else {
+                var sql1 = `UPDATE resources SET views='${data[0].views+1}' WHERE id=${data[0].id}`
+                con.query(sql1, function(err, data) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log(data);
+                    }
+                })
                 res.send({
                     code: 1,
                     data: data,
@@ -93,6 +101,14 @@ router.get('/getDetailsById', function(req, res, next) {
                     message: 'error'
                 })
             } else {
+                var sql1 = `UPDATE resources SET views='${data[0].views+1}' WHERE id=${data[0].id}`
+                con.query(sql1, function(err, data) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log('浏览量+1');
+                    }
+                })
                 res.send({
                     code: 1,
                     data: data,
