@@ -11,12 +11,15 @@ router.use(bodyParser.json());
 router.get('/', function(req, res, next) {
     res.render('./news', {});
 });
+
 router.get('/a', function(req, res, next) {
     res.render('./hangye', {});
 });
+
 router.get('/b', function(req, res, next) {
     res.render('./yunshenews', {});
 });
+
 router.get('/c', function(req, res, next) {
     res.render('./News-detail', {});
 });

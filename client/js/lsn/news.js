@@ -23,10 +23,7 @@ function fun() {
                       <p class="sy">${data.data[i].type}</p>
                       <p class="noeti" id='${data.data[i].id}'>${data.data[i].title}</p>
                       <p class="tx"></p>
-                      <p class="date">${data.data[i].releasedata.substring(
-          0,
-          10
-        )}</p>
+                      <p class="date">${data.data[i].releasedata.substring(0,10)}</p>
                     </a>
                     <a href="" class="ixmore">
                       <i class="ico"></i>
@@ -75,7 +72,9 @@ $(".news-pre").on("click", function () {
 });
 
 $('.inner ul').on('click'  ,'.txts',  function(){
-  // console.log($(this).children('.noeti').attr('id'))
+  //attr获取标签的属性
+  // console.log($(this).children('.noeti').attr('title'))
   // console.log($('.noeti').attr('id'))
   $.cookie('id', $(this).children('.noeti').attr('id') )
+  // $.cookie('title', $(this).children('.noeti').attr('title') )
 })
