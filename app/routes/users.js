@@ -63,7 +63,30 @@ router.post('/regestor', function(req, res, next) {
             })
         }
     })
+})
 
+
+// 用户留言接口
+router.post('/feedback', function(req, res, next) {
+    if (req.cookies.name) {
+        var sql = `INSERT INTO feedback VALUES(null, '${req.body.text}','${req.body.number}','${req.body.email}','${req.cookies.name}')`
+    } else {
+        var sql = `INSERT INTO feedback VALUES(null, '${req.body.text}','${req.body.number}','${req.body.email}',null)`
+    }
+    con.query(sql, function(err, data) {
+        if (err) {
+            console.log(err);
+            res.send({
+                code: 0,
+                message: '反馈失败！'
+            })
+        } else {
+            res.send({
+                code: 1,
+                message: '反馈成功！'
+            })
+        }
+    })
 })
 
 module.exports = router;
