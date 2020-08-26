@@ -57,7 +57,7 @@ router.get('/getData', function(req, res, next) {
     }
 });
 
-router.get('/getDetails', function(req, res, next) {
+router.get('/getDetailsByTitle', function(req, res, next) {
     if (req.query.type) {
         var sql = `select * from resources where type = '${req.query.type}' and title= '${req.query.title}'`
         con.query(sql, function(err, data) {
@@ -82,7 +82,33 @@ router.get('/getDetails', function(req, res, next) {
             message: 'error'
         })
     }
+})
 
+router.get('/getDetailsById', function(req, res, next) {
+    if (req.query.type) {
+        var sql = `select * from resources where type = '${req.query.type}' and id= '${req.query.id}'`
+        con.query(sql, function(err, data) {
+            if (data.length === '0') {
+                res.send({
+                    code: 0,
+                    data: '未查找到数据',
+                    message: 'error'
+                })
+            } else {
+                res.send({
+                    code: 1,
+                    data: data,
+                    message: 'succes'
+                })
+            }
+        })
+    } else {
+        res.send({
+            code: 0,
+            data: '参数不正确',
+            message: 'error'
+        })
+    }
 })
 
 
