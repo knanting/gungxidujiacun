@@ -25,3 +25,6 @@ $(function(){
       console.log( $('.shopping_a').html())
    })
 })
+function app(){
+
+}
