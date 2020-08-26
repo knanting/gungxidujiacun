@@ -17,8 +17,9 @@ $(function () {
                 var apps = eval('(' + data.data[i].imgsrc + ')')
                 // 数据库文字
                 var hapi = data.data[i].introduce
+                console.log(data.data[i].id)
                 htmls = `<div>${hapi}</div>`
-                html = `<img src='${apps[0]}'>`
+                html = `<img id="${data.data[i].id}" src='${apps[0]}'>`
                 $('.hppt').eq(i).html(html)
                 $('.hppt-v').eq(i).html(htmls)
 
@@ -48,7 +49,7 @@ $(function () {
                     var apps = eval('(' + data.data[i].imgsrc + ')')
                     // 动态获取文字
                     var hapi =data.data[i].introduce
-                    html = `<img src='${apps[0]}'>`
+                    html = `<img  id="${data.data[i].id}" src='${apps[0]}'>`
                     htmls = `<div>${hapi}</div>`
                     $('.hppt').eq(bb).html(html)
                     $('.hppt-v').eq(bb).html(htmls)
@@ -80,7 +81,7 @@ $(function () {
                     var apps = eval('(' + data.data[i].imgsrc + ')')
                     // 动态获取文字
                     // var hapi =data.data[i].introduce
-                    html = `<img src='${apps[0]}'>`
+                    html = `<img  id="${data.data[i].id}" src='${apps[0]}'>`
                     htmls = `<div>${hapi}</div>`
                     $('.hppt').eq(bb).html(html)
                     // $('.hppt-v').eq(bb).html(htmls)
@@ -104,16 +105,20 @@ $(function () {
                 for (var i = 6 * (ppt - 1); i < 6 * ppt; i++) {
                     // 动态获取图片
                     var apps = eval('(' + data.data[i].imgsrc + ')')
+
                     // 动态获取文字
                     var hapi = data.data[i].introduce
-                    html = `<img src='${apps[0]}'>`
+                    html = `<img  id="${data.data[i].id}" src='${apps[0]}' ">`
                     htmls = `<div>${hapi}</div>`
                     $('.hppt').eq(bb).html(html)
                     $('.hppt-v').eq(bb).html(htmls)
                     bb++
                 }
             })
+            // web存储
+            $
         }
+        
     })
 
 })

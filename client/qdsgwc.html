@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_1582419_49rqs7dgiie.css">
     <link rel="stylesheet" href="./top-foot/css/top-foot.css">
     <link rel="stylesheet" href="./css/qds/qdsgwc.css">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2027782_ieqqsg0n3a.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2027782_09ui54a10kzg.css">
 </head>
 
 <body>
@@ -129,17 +129,22 @@
         <div class="shopping-trolley">
             <div class="shopping-trolley_a">
                 <div class="shopping_a">
-                    <img src="./images/qds/ysyz6-1.jpg" alt="">
+                    <div class="shopping-img">
+                        <!-- <img src="./images/qds/ysyz6-1.jpg" alt=""> -->
+                    </div>
+                    <div class="cover"></div>
+                    
                 </div>
+                
                 <div class="shopping_b">
                     <div class="shopping_ba">
-                        <img src="./images/qds/ysyz6-2.jpg" alt="">
+                        <!-- <img src="./images/qds/ysyz6-2.jpg" alt="">
                         <img src="./images/qds/ysyz7-1.jpg" alt="">
                         <img src="./images/qds/ysyz7-2.jpg" alt="">
                         <img src="./images/qds/ysyz7-1.jpg" alt="">
                         <img src="./images/qds/ysyz7-1.jpg" alt="">
                         <img src="./images/qds/ysyz7-1.jpg" alt="">
-                        <img src="./images/qds/ysyz7-1.jpg" alt="">
+                        <img src="./images/qds/ysyz7-1.jpg" alt=""> -->
                     </div>
                     <div class="zuos">
                         <i class="iconfont icon-zuojiantou  zuos_ico"></i>
@@ -150,12 +155,47 @@
                 </div>
             </div>
             <div class="shopping-trolley_b">
-
+                <div class="taofang">雨水套房</div>
+                <div class="fenlei"><span>所属分类</span><span class="fenlei-a">雨水套房</span></div>
+                <div class="shoujia">零售价<span class="shoujia-a">639.00</span>元</div>
+                <div class="shuliang">
+                    <div class="shul">数量</div>
+                    <div class="jian">-</div>
+                    <input type="text" value="1" class="ipt">
+                    <div class="jia">+</div>
+                    <div class="kucun">库存</div>
+                    <div class="yi">1</div>
+                </div>
+                <div class="goumai">
+                    <div class="liji">
+                        <i class="iconfont icon-goumai" class="zitia"></i>
+                        <span>立即购买</span>
+                    </div>
+                    <div class="jiagou">
+                        <i class="iconfont icon-icon-" class="zitib"></i>
+                        <span>加入购物车</span>
+                    </div>
+                </div>
+                <div class="fangda">
+                   <!-- <img src="./images/qds/ysyz6-1.jpg" alt=""> -->
+                </div>
             </div>
+             <!-- 浏览量 -->
+            <div class="lilanliang">
+                <i class="iconfont icon-yanjing "></i>
+                <span>浏览量：</span>
+                <div class="shuz">1235</div>
+              </div>
+              <!-- 房型描述 -->
+              <div class="miaoshu">
+                  <div class="miaoshu-a">房型描述</div>
+                  <div class="miaoshu-b">雨水套房</div>
+              </div>
         </div>
     </div>
     <script src="./js/qds/jquery.js"></script>
     <script src="./js/qds/qdsgwc.js"></script>
+    <script src="./js/qds/qdsysyzAJAX.js"></script>
     <!-- 底部 -->
     <%-include('./foot.html')%>
 </body>

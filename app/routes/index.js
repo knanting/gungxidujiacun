@@ -23,6 +23,16 @@ router.get('/gwc', function(req, res, next) {
     res.render('./qdsgwc.html', {});
 });
 
+router.get('/aaap', function(req, res, next) {
+    // console.log(req)
+    console.log(1111)
+    res.render('./qdsgwc.html', {});
+});
+// router.get('/aaap/:id', function(req, res, next) {
+//     var id = req.params.id
+//     res.render('./qdsgwc.html', {});
+// });
+
 router.get('/getData', function(req, res, next) {
     if (req.query.type) {
         if (req.query.type === '*') {

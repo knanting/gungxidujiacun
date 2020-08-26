@@ -128,37 +128,37 @@
             <ul>
                 <li>
                     <div class="tup-a">
-                        <a href="" class="hppt"> </a>
+                        <a href="/aaap" class="hppt"> </a>
                         <div class="hppt-v"></div>
                     </div>
                 </li>
                 <li>
                     <div class="tup-a">
-                        <a href="" class="hppt"> </a>
+                        <a href="/aaap" class="hppt"> </a>
                         <div class="hppt-v"></div>
                     </div>
                 </li>
                 <li>
                     <div class="tup-a">
-                        <a href="" class="hppt"> </a>
+                        <a href="/aaap" class="hppt"> </a>
                         <div class="hppt-v"></div>
                     </div>
                 </li>
                 <li>
                     <div class="tup-a">
-                        <a href="" class="hppt"> </a>
+                        <a href="/aaap" class="hppt"> </a>
                         <div class="hppt-v"></div>
                     </div>
                 </li>
                 <li>
                     <div class="tup-a">
-                        <a href="" class="hppt"> </a>
+                        <a href="/aaap" class="hppt"> </a>
                         <div class="hppt-v"></div>
                     </div>
                 </li>
                 <li>
                     <div class="tup-a">
-                        <a href="" class="hppt"> </a>
+                        <a href="/aaap" class="hppt"> </a>
                         <div class="hppt-v"></div>
                     </div>
                 </li>
@@ -179,62 +179,7 @@
     </div>
     <script src="./js/qds/jquery.js"></script>
     <script src="./js/qds/qdsysyz.js"></script>
-    <!-- <script>
-
-        $(function () {
-
-            $.ajax({
-                url: 'http://localhost:3000/getData',
-                method: 'get',
-                data: {
-                    type: '云舍驿站',
-                    class: '*'
-                },
-
-                success: function (data) {
-                    var texts = ["立冬套房", "立春套房", "大雪家庭套房", "大树屋", "春分套房", "小暑套房",]
-                    var textv = ["雨水套房", "小雪套房", "小树屋", "小满套房", "夏至标双套房", "立夏套房",]
-                    var texto = ["秋分套房", "立秋套房", "芒种套房", "寒露套房", "谷雨家庭套房", "白露套房",]
-                    var html = ''
-                    for (var i = 0; i < 6; i++) {
-                        var apps = eval('(' + data.data[i].imgsrc + ')')
-                        html = `<img src='${apps[0]}'>`
-                        $('.hppt').eq(i).html(html)
-
-                    }
-                    $('.pass').on('click', function () {
-                        var ppt = parseInt($(this).text())
-                        var bb = 0
-
-                        for (var i = 6 * (ppt - 1); i < 6 * ppt; i++) {
-                            var apps = eval('(' + data.data[i].imgsrc + ')')
-                            html = `<img src='${apps[0]}'>`
-                            $('.hppt').eq(bb).html(html)
-                            bb++
-                        }
-                        if (ppt === 1) {
-                            for (var i = 0; i < textv.length; i++) {
-                                $('.hppt-v').eq(i).text(textv[i])
-                            }
-                        }
-                        if(ppt === 2){
-                            for (var i = 0; i < texts.length; i++) {
-                                $('.hppt-v').eq(i).text(texts[i])
-                            }
-                        }
-                        if (ppt === 3) {
-                            for (var i = 0; i < texto.length; i++) {
-                                $('.hppt-v').eq(i).text(texto[i])
-                            }
-                        }
-                    })
-                }
-
-
-            })
-
-        })
-    </script> -->
+  
     <!-- 底部 -->
     <%-include('./foot.html')%>
 </body>

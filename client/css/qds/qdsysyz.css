@@ -111,9 +111,9 @@ a{
     margin: 0 auto;
     
 }
-.tup ul{
-    /* overflow: hidden; */
-}
+/* .tup ul{
+    overflow: hidden;
+} */
 .tup li{
     width: calc((100% - 60px)/3);
     float: left;

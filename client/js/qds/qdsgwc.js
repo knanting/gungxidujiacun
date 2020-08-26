@@ -11,6 +11,7 @@ $(function(){
              })
             }
     })
+    // 点击回到上一张
    $('.zuos').on('click',function(){
     if( $('.shopping_ba img').length > 4 && index !== 0){
             index--
@@ -19,12 +20,43 @@ $(function(){
             })
     }
    })
-   $('.shopping_ba img').on('click',function(){
-       console.log($(this))
-
-      console.log( $('.shopping_a').html())
+     // 点击小照片大照片以及放大镜照片同步  
+   $('.shopping_ba img').on('click',(e)=>{
+      $('.shopping-img').html($(e.target)[0].outerHTML)
+      $('.fangda').html($(e.target)[0].outerHTML)
    })
-})
-function app(){
+     // 放大镜
+     $('.shopping_a').on('mousemove',function(){
+         $('.fangda').css({
+            display: 'block'
+         })
+         $('.cover').css({
+            display: 'block'
+         })
+         var e = e || window.event;
+         var rect = $('.shopping_a')[0].getBoundingClientRect()
+         var x = e.clientX - rect.left - 75;
+         var y = e.clientY - rect.top - 50;
 
-}
+         x = x <= 0 ? 0 : x >= 450 ? 450 : x;
+         y = y <= 0 ? 0 : y >= 300 ? 300 : y;
+         $('.cover').css({
+             left: x + 'px',
+             top : y + 'px'
+         })
+         $('.fangda img ').css({
+            marginLeft : -1200 / 600 * x  + 'px',
+            marginTop : -800 / 400 * y  + 'px'
+         })
+     })
+     $('.shopping_a').on('mouseleave',function(){
+        $('.fangda').css({
+            display: 'none'
+         })
+         $('.cover').css({
+            display: 'none'
+         })
+     })
+  
+
+})
