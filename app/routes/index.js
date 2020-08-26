@@ -17,6 +17,11 @@ router.get('/', function(req, res, next) {
     res.render('./Celebration.html', {});
 });
 
+/* 接口跳转到活动庆典子页 */
+router.get('/Celebration-a', function(req, res, next) {
+    res.render('./Celebration-a.html', {});
+});
+
 router.get('/getData', function(req, res, next) {
     if (req.query.type) {
         if (req.query.type === '*') {
@@ -78,7 +83,34 @@ router.get('/getDetails', function(req, res, next) {
     }
 
 })
+// 尝试改为id ,存储
+router.get('/getDetails', function(req, res, next) {
+    if (req.query.type) {
+        var sql = `select * from resources where type = '${req.query.type}' and id= '${req.query.id}'`
+        con.query(sql, function(err, data) {
+            if (data.length === '0') {
+                res.send({
+                    code: 0,
+                    data: '未查找到数据',
+                    message: 'error'
+                })
+            } else {
+                res.send({
+                    code: 1,
+                    data: data,
+                    message: 'succes'
+                })
+            }
+        })
+    } else {
+        res.send({
+            code: 0,
+            data: '参数不正确',
+            message: 'error'
+        })
+    }
 
+})
 
 
 module.exports = router;
