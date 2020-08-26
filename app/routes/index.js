@@ -17,6 +17,9 @@ router.get('/a', function(req, res, next) {
 router.get('/b', function(req, res, next) {
     res.render('./yunshenews', {});
 });
+router.get('/c', function(req, res, next) {
+    res.render('./News-detail', {});
+});
 
 router.get('/getData', function(req, res, next) {
     if (req.query.type) {

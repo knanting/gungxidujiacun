@@ -13,15 +13,15 @@ function fun() {
       for (let i = start; i <= end; i++) {
         // console.log(data.data[i]);
         let imgsrc = eval("(" + data.data[i].imgsrc + ")");
-        console.log(imgsrc);
+        // console.log(imgsrc);
         let src = (html += `<li>
                   <div class="bodr">
                     <div class="pic">
                       <img src="${imgsrc[0]}" alt="" />
                     </div>
-                    <a href="" class="txts">
+                    <a href="/c" class="txts">
                       <p class="sy">${data.data[i].type}</p>
-                      <p class="noeti">${data.data[i].title}</p>
+                      <p class="noeti" id='${data.data[i].id}'>${data.data[i].title}</p>
                       <p class="tx"></p>
                       <p class="date">${data.data[i].releasedata.substring(
           0,
@@ -73,3 +73,9 @@ $(".news-pre").on("click", function () {
   }
 
 });
+
+$('.inner ul').on('click'  ,'.txts',  function(){
+  // console.log($(this).children('.noeti').attr('id'))
+  // console.log($('.noeti').attr('id'))
+  $.cookie('id', $(this).children('.noeti').attr('id') )
+})
