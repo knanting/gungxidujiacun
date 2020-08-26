@@ -61,18 +61,17 @@ fun()
   var index1=1;
   $(document).ready(function () {
     $(".news-pre").on("click", function () {
-      
-      if(index1 = 0){
+      if(index1 = 1){
         $('.news-pre').disabled=true;
 
+        index1--;
+        $('.news-pre1').css({cursor :'pointer',background:'#453d3b'})
+        if(index1 < 0){
+          index1=3;
+        }
       }
-      index1++;
-      $('.news-pre1').css({cursor :'pointer',background:'#453d3b'})
-      if(index1>3){
-        index1=1;
-      }
-      $('.news-pagenum').eq(0).text(1)
-      $('.news-pagenum').eq(index).addClass("active").siblings().removeClass("active")
+      $('.news-pagenum').eq(index1).text(1)
+      $('.news-pagenum').eq(index1).addClass("active").siblings().removeClass("active")
       fun()
     });
   });
