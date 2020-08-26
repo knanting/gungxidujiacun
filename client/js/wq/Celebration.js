@@ -217,9 +217,13 @@ $(function () {
             })
 
             // 图片点击存储数据下一个页面用
-            $('.Celebration-content').on('click', '.Celebration-CCont', function (){
-                console.log(this)
-                // location.href="Celebration-a";
+            $('.Celebration-content').on('click', '.Celebration-CCont', function () {
+                // 获取id值
+                var id = $(this).children('.Celebration-CCTPic').attr('data-id');
+                // 存到本地web存储
+                localStorage.setItem('id', id)
+                // 跳转新页面
+                location.href = "Celebration-a";
 
             })
 

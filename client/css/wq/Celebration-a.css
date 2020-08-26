@@ -1,0 +1,53 @@
+/* 清浮动 */
+
+.clearfix:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+/* 主体 */
+
+.CSubpage {
+    width: 100%;
+    height: 100%;
+    background: url('../../images/wq/Celebration_33.jpg') repeat-y center;
+    padding: 40px 0;
+}
+
+/* 标题 */
+
+.CSubpage-title {
+    width: 440px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.CSubpage-title>img {
+    display: block;
+    width: 440px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+/* 内容主体 */
+.CSubpage-main{
+    width: 1130px ;
+    margin: 24px auto ;
+    padding: 10px 35px ;
+}
+.CSubpage-sub{
+    width: 100%;
+    height: 40px;
+    background-color: rgba(179, 165, 156, 1);
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+    color: rgba(69, 61, 59, 1);
+    font-weight: 400;
+}
