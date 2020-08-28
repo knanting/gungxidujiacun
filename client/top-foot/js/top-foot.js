@@ -1,4 +1,18 @@
 $(function() {
+    if ($.cookie('name')) {
+        $('.login i').hide()
+        $('.login a').text($.cookie('name'))
+        $('.login a').css({
+            'cursor': 'pointer',
+            'pointer-events': 'none'
+        })
+        $('.regestor i').attr('class', 'iconfont icon-cuo')
+        $('.regestor a').text('退出')
+        $('.regestor a').on('click', function() {
+            $.removeCookie('name')
+        })
+    }
+
     var index = 0
 
     var setClass = () => {
