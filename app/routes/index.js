@@ -18,11 +18,12 @@ router.get('/ysyz', function(req, res, next) {
     console.log(1111)
     res.render('./qdsysyz.html', {});
 });
+// 购物车
 router.get('/gwc', function(req, res, next) {
     console.log(1111)
     res.render('./qdsgwc.html', {});
 });
-
+// 点击云社驿站里图片跳转购物车
 router.get('/aaap', function(req, res, next) {
     // console.log(req)
     console.log(1111)

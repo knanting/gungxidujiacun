@@ -5,35 +5,37 @@ $(function () {
     data:{
         type: '云舍驿站',
         class: '*',
+       
     },
     success: function (data){
-      
+       
+        var pddsss = localStorage.getItem('id')   
+        // console.log(typeof pddsss)
+          var  html=""
+          var  htmla=''
+         
+          
+        data.data.forEach(item => {
+            // console.log(item)
+            // console.log(item.id)
+            if(item.id === parseInt(pddsss)){
+              console.log(item)
+              var apps = eval('(' + item.imgsrc + ')')
+              console.log()
+              htmla =`<img src="${apps[0]}" alt="">`
+              
+              apps.forEach(items =>{
+                  
+                  html+= `<img src="${items}" alt="">`
+              })
+            }
+            console.log(htmla)
+           $('.shopping_ba').html(html)
+           $('.shopping-img').html(htmla)
+           $('.fangda').html(htmla)
+         
+        });
     }
    })
-
-
-
-
-
-
-
-
-
-
-     // let html = ''
-        //  data.data.forEach(item => {
-        //      if(item.id === 23){
-        //         var apps = eval('(' + item.imgsrc + ')')
-        //         apps.forEach(item => {
-                    
-        //             console.log(item)
-        //             html += `
-        //             <img src="${item}" alt="">
-        //            `
-        //         })
-        //      }
-        //  })
-        //  $('.shopping_ba').html(html)
-
 
 })

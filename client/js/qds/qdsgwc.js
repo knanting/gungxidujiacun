@@ -21,8 +21,8 @@ $(function(){
     }
    })
      // 点击小照片大照片以及放大镜照片同步  
-   $('.shopping_ba img').on('click',(e)=>{
-      $('.shopping-img').html($(e.target)[0].outerHTML)
+      $('.shopping_ba img').on('click',(e)=>{
+         $('.shopping-img').html($(e.target)[0].outerHTML)
       $('.fangda').html($(e.target)[0].outerHTML)
    })
      // 放大镜

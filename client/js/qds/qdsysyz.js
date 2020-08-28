@@ -11,7 +11,7 @@ $(function () {
             var html = ''
             var htmls
             // 默认渲染的6张图片及文字
-            console.log(data)
+            // console.log(data)
             for (var i = 0; i < 6; i++) {
                 // 数据库图片
                 var apps = eval('(' + data.data[i].imgsrc + ')')
@@ -19,7 +19,7 @@ $(function () {
                 var hapi = data.data[i].introduce
                 console.log(data.data[i].id)
                 htmls = `<div>${hapi}</div>`
-                html = `<img id="${data.data[i].id}" src='${apps[0]}'>`
+                html = `<img apps="${data.data[i].id}" src='${apps[0]}'>`
                 $('.hppt').eq(i).html(html)
                 $('.hppt-v').eq(i).html(htmls)
 
@@ -49,7 +49,7 @@ $(function () {
                     var apps = eval('(' + data.data[i].imgsrc + ')')
                     // 动态获取文字
                     var hapi =data.data[i].introduce
-                    html = `<img  id="${data.data[i].id}" src='${apps[0]}'>`
+                    html = `<img  apps="${data.data[i].id}" src='${apps[0]}'>`
                     htmls = `<div>${hapi}</div>`
                     $('.hppt').eq(bb).html(html)
                     $('.hppt-v').eq(bb).html(htmls)
@@ -81,7 +81,7 @@ $(function () {
                     var apps = eval('(' + data.data[i].imgsrc + ')')
                     // 动态获取文字
                     // var hapi =data.data[i].introduce
-                    html = `<img  id="${data.data[i].id}" src='${apps[0]}'>`
+                    html = `<img  apps="${data.data[i].id}" src='${apps[0]}'>`
                     htmls = `<div>${hapi}</div>`
                     $('.hppt').eq(bb).html(html)
                     // $('.hppt-v').eq(bb).html(htmls)
@@ -108,7 +108,7 @@ $(function () {
 
                     // 动态获取文字
                     var hapi = data.data[i].introduce
-                    html = `<img  id="${data.data[i].id}" src='${apps[0]}' ">`
+                    html = `<img  apps="${data.data[i].id}" src='${apps[0]}' ">`
                     htmls = `<div>${hapi}</div>`
                     $('.hppt').eq(bb).html(html)
                     $('.hppt-v').eq(bb).html(htmls)
@@ -116,7 +116,16 @@ $(function () {
                 }
             })
             // web存储
-            $
+
+               $('.hppt').on('click',function(){
+                //    console.log(11111111111111)
+                //    console.log($(this).children($('.hppt img')).attr("apps"))
+                   var appss= $(this).children().attr("apps")
+                   console.log(appss)
+                   localStorage.setItem('id',appss)
+                   window.location.href = "./aaap";
+               })
+          
         }
         
     })
