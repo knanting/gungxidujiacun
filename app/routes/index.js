@@ -12,6 +12,13 @@ router.get('/', function(req, res, next) {
     res.render('./foot', {});
 });
 
+router.get('/zxly', function(req, res, next){
+    res.render('./zxly',{})
+})
+router.get('/lxwm', function(req, res, next){
+    res.render('./lxwm',{})
+})
+
 router.get('/getData', function(req, res, next) {
     if (req.query.type) {
         if (req.query.type === '*') {
@@ -35,6 +42,8 @@ router.get('/getData', function(req, res, next) {
         });
     }
 });
+
+
 // router.post('/login', function(req, res, next) {
 //     var sql = `select * from resources`;
 //     con.query(sql, function(err, data) {

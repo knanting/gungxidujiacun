@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.wm_bgpic{
+    background-image: url('../../images/qch/lxwm-1.jpg');
+    width: 100%;
+    margin-top: 5px;
+    overflow: hidden;
+}
+.wm_bgpic .bx{
+    width: 1200px;
+    height: 1076px;
+    margin: 0 auto; 
+    text-align: center;
+    /* position: relative; */
+}
+.wm_bgpic .wm_list{
+    margin: 88px auto 0;
+    width: 611px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.wm_bgpic .wm_list .wm_r1,.wm_r2,.wm_r3{
+    height: 39px;
+    width: 115px;
+    border: 1px solid #ccc;
+    border-radius: 55px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 39px;
+}
+.wm_bgpic .wm_list a{
+    color: #000;
+}
+.wm_bgpic .wm_list .wm_r1:hover{
+    background-color: #48403E;
+}
+.wm_bgpic .wm_list .wm_r2:hover{
+    background-color: #48403E;
+}
+.wm_bgpic .wm_list .wm_r3:hover{
+    background-color: #48403E;
+}
+.wm_bgpic .wm_list .wm_r1:hover a{
+    color: #fff;
+}
+.wm_bgpic .wm_list .wm_r2:hover a{
+    color: #fff;
+}
+.wm_bgpic .wm_list .wm_r3:hover a{
+    color: #fff;
+}
+.wm_bgpic .pic1 img{
+    width: 349px;
+    height: 127px;
+    display: block;
+    margin: 13px auto 0;
+}
+.wm_bgpic .ptext{
+    font-size: 14px!important;
+    color: #48403e;
+    /* position: absolute;
+    top: 200px;
+    left: 215px; */
+    letter-spacing: 38px;
+    text-align: center;
+}
+.wm_bgpic .pic2{
+    background: url('../../images/qch/lxwm-3.png') 1560px 500px;
+    margin-left: -1560px;
+    opacity: 0.27;
+    margin-top: -160px;
+    width: 100%;
+    height: 300px;
+    transition: all .5s;
+}
+.wm_bgpic .content{
+    margin-top: -47px;
+    margin-right: -10000px;
+    height: 355px;
+    display: inline-block;
+    color: #666;
+    border-color: #f0f0f0;
+    transition: all .5s;
+    font-size: 18px;
+}
+.wm_bgpic .content .ly{
+    margin: 10px;
+    font-size: 0;
+}
+.wm_bgpic .content_text{
+    height: 200px;
+    width: 991px;
+    padding-left: 5px;
+    border-style: solid;
+    border-color: rgba(240, 240, 240, 1);
+    resize: none;
+    padding-top: 5px;
+    outline: none;
+    color: #393939;
+}
+.wm_bgpic .textarea:hover{
+    cursor: text;
+}
+.wm_bgpic .content_text:focus{
+    border-color: rgba(77, 144, 203, 1);
+}
+.wm_bgpic .err_tip{
+    height: 31px;
+    font-size: 14px;
+    display: none;
+    margin-top: 3px;
+    text-align: left;
+}
+.wm_bgpic .err_tip .icon-error{
+    color: red;
+    margin: 0 10px;
+    opacity: 0.5;
+    vertical-align: middle;
+    font-size: inherit;
+}
+.wm_bgpic .err_tip .text_err{
+    display: inline-block;
+    border: 1px solid #c6cbd0;
+    border-radius: 2px;
+    padding: 5px 10px;
+    background-color: #f0f0f1;
+    font-style: normal;
+}
+.wm_bgpic .ipu{
+    width: 670px;
+    display: flex;
+    justify-content: space-between; 
+    padding: 10px 0 10px 0;  
+}
+.wm_bgpic .tel,.wm_bgpic .email{
+    color: #666;
+    margin: 10px;
+    position: relative;
+}
+.wm_bgpic .tel .iputext,.wm_bgpic .email .iputext-2{
+    width: 317px;
+    height: 40px;
+    padding: 0 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid #f0f0f0;
+    border-radius: 3px;
+}
+.wm_bgpic .iputext:focus,.wm_bgpic .iputext-2:focus{
+    border-color: rgba(77, 144, 203, 1);
+}
+.wm_bgpic .tel:hover .icon-Z,.wm_bgpic .email:hover .icon-xinfengxinjian{
+    color: #fff !important;
+}
+.wm_bgpic .tel:hover input,.wm_bgpic .email:hover input{
+    color: #fff !important;
+    background: #f1f1f1 !important;
+}
+.wm_bgpic .tel>i,.wm_bgpic .email>i{
+    position: absolute;
+    top: 12px;
+}
+
+.wm_bgpic .btn{
+    background-color: rgba(69, 61, 59, 1);
+    width: 1004px;
+    height: 40px;
+    margin: 10px 0 0 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    outline: 0;
+    border: 0;
+}
+.wm_bgpic .box{
+    display: inline-block;
+    padding-left: 10px;
+    width: 1003px;
+    height: 237px;
+    margin-top: 60px;
+    position: relative;
+}
+.wm_bgpic .pic{
+    width: 268px;
+    height: 179px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    margin: 0 5px 0;
+    padding: 5px 5px 40px;
+}
+.wm_bgpic .pic:hover{
+    background-color: rgba(179, 165, 156, 1);
+}
+.wm_bgpic .title{
+    font-size: 16px;
+    color: #453d38;
+    line-height: 40px;
+    margin-left: -140px;
+}

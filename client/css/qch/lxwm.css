@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.wm_bgpic{
+    background-image: url('../../images/qch/lxwm-1.jpg');
+    width: 100%;
+    margin-top: 10px;
+}
+.wm_bgpic .bx{
+    width: 1200px;
+    height: 685px;
+    margin: 0 auto; 
+    position: relative;
+    overflow: hidden;
+}
+.wm_bgpic .wm_list{
+    position: absolute;
+    top: 83px;
+    left: 294px;
+    width: 611px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.wm_bgpic .wm_list .wm_r1,.wm_r2,.wm_r3{
+    height: 39px;
+    width: 115px;
+    border: 1px solid #ccc;
+    border-radius: 55px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 39px;
+}
+.wm_bgpic .wm_list a{
+    color: #000;
+}
+.wm_bgpic .wm_list .wm_r1:hover{
+    background-color: #48403E;
+}
+.wm_bgpic .wm_list .wm_r2:hover{
+    background-color: #48403E;
+}
+.wm_bgpic .wm_list .wm_r3:hover{
+    background-color: #48403E;
+}
+.wm_bgpic .wm_list .wm_r1:hover a{
+    color: #fff;
+}
+.wm_bgpic .wm_list .wm_r2:hover a{
+    color: #fff;
+}
+.wm_bgpic .wm_list .wm_r3:hover a{
+    color: #fff;
+}
+.wm_bgpic .pic1 img{
+    width: 349px;
+    height: 127px;
+    display: block;
+    position: absolute;
+    top: 127px;
+    left: 777px;
+}
+.wm_bgpic .ptext{
+    font-size: 14px!important;
+    color: #48403e;
+    position: absolute;
+    top: 285px;
+    left: 215px;
+    letter-spacing: 38px;
+    text-align: center;
+}
+.wm_bgpic .pic2{
+    background: url('../../images/qch/lxwm-3.png') 1560px 500px;
+    opacity: 0.25;
+    position: absolute;
+    top: 123px;
+    width: 100%;
+    height: 500px;
+}
+.wm_bgpic .pic3 img{
+    position: absolute;
+    top: 348px;
+    left: -28px;
+    width: 1245px;
+    height: 264px;
+}
+.wm_bgpic .pic3 .text1,.text2,.text3{
+    position: absolute;
+    font-size: 16px;
+    top: 445px;
+}
+.wm_bgpic .pic3 .text1{
+    left: 150px;
+}
+.wm_bgpic .pic3 .text2{
+    left: 560px;
+}
+.wm_bgpic .pic3 .text3{
+    left: 970px;
+}
+.wm_bgpic .pic3 .ptext2,.ptext3,.ptext4{
+    position: absolute;
+    font-size: 16px;
+    top: 526px;
+    text-align: center;
+}
+.wm_bgpic .pic3 .ptext2{
+    left: 60px;
+    width: 257px;
+}
+.wm_bgpic .pic3 .ptext3{
+    left: 540px;
+}
+.wm_bgpic .pic3 .ptext4{
+    left: 920px;
+}

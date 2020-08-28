@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线留言</title>
+    <link rel="stylesheet" href="./css/qch/zxly.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1582419_rnz25ecqmur.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1871531_53epo1hakwc.css">
+    <link rel="stylesheet" href="./css/qch/swiper.css">
+    <link rel="stylesheet" href="./top-foot/css/top-foot.css">
+</head>
+
+<body>
+    <%-include('./top.html')%>
+    <div class="wm_bgpic">
+        <div class="bx">
+            <div class="wm_list">
+                <div class="wm_r1"><a href="">关于云舍</a></div>
+                <div class="wm_r2"><a href="">联系我们</a></div>
+                <div class="wm_r3"><a href="">在线留言</a></div>
+            </div>
+            <div class="pic1">
+                <img src="./images/qch/lxwm-2.png" alt="">
+            </div>
+            <p class="ptext"> 十 八 世 纪 的 中 国 村 落</p>
+            <div class="pic2"></div>
+            <form action="/feedback" method="POST" class="content">
+                <div class="ly">
+                    <textarea class="content_text" placeholder="请输入留言内容"></textarea>
+                    <div class="err_tip">
+                        <i class="iconfont icon-error"></i>
+                        <i class="text_err">
+                            <div class="font">留言内容不能为空</div>
+                        </i>
+                    </div>
+                </div>
+                <div class="ipu">
+                    <div class="tel">
+                        <i class="iconfont icon-Z"></i>
+                        <input type="text" class="iputext" placeholder="请输入电话号码">
+                        <div class="err_tip">
+                            <i class="iconfont icon-error"></i>
+                            <i class="text_err">
+                                <div class="font">您未输入号码或输入号码格式不正确</div>
+                            </i>
+                        </div>
+                    </div>
+                    <div class="email">
+                        <i class="iconfont icon-xinfengxinjian"></i>
+                        <input type="text" class="iputext-2" placeholder="请输入邮箱">
+                        <div class="err_tip">
+                            <i class="iconfont icon-error"></i>
+                            <i class="text_err">
+                                <div class="font">请输入正确格式的邮箱</div>
+                            </i>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="btn" title="点击提交留言">
+            </form>
+            <div class="box">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- <a href="">
+                            <div class="swiper-slide pic">
+                                <div class="img_tag">
+                                    <img src="./images/qch/zxly.jpg" alt="">
+                                </div>
+                                <p class="title">云舍休闲度假村</p>
+                            </div>
+                        </a> -->
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/qch/jquery.js"></script>
+    <script src="./js/qch/swiper.js"></script>
+    <script src="./js/qch/zxly.js"></script>
+    <%-include('./foot.html')%>
+
+</body>
+
+</html>
