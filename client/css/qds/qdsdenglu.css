@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color:#453d3b;
+}
+ul,li{
+    list-style: none;
+}
+.abc{
+    padding-top: 80px;
+    width: 100%;
+    height: 404px;
+    background: url('../../images/qds/ysyzbeij.jpg');
+}
+.hani{
+    width: 406px;
+    height: 404px;
+    margin: 0 auto;
+  
+
+}
+.hani_a{
+    width: 406px;
+    height: 40px;
+    background: #453d3b;
+    margin-bottom: 2px;
+  
+}
+.hani_b{
+    width: 120px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0 22px 0 15px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+
+}
+.shuru{
+    width: 404px;
+    height: 278px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 30px 42px;
+    position: relative;
+}
+.bai{
+    width: 100%;
+    height: 16px;
+    margin-bottom: 10px;
+}
+.apa,.apb{
+width: 100%;
+height: 35px;
+margin-bottom: 20px;
+}
+.apa .api{
+    /* display: inline-block; */
+    position: absolute;
+    top: 56px;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #453d3b;
+}
+.apb .api{
+    position: absolute;
+    top: 111px;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #453d3b;
+}
+
+.apa input ,.apb input{
+    width: 318px;
+    height:35px ;
+    font-size: 14px;
+    padding-left: 35px!important;
+    padding-right:15px ;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    
+}
+.dianj{
+    width: 318px;
+    height: 44px;
+    background: #453d3b;
+    text-align: center;
+    line-height: 44px;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.xiala{
+    width: 318px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+

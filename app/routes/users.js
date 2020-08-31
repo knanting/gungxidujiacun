@@ -7,16 +7,17 @@ router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 
 // 用户登录页面接口
-router.get('/login', function(req, res, next) {
-    console.log(1);
-    // res.render('login', {})
-});
+// router.get('/login', function(req, res, next) {
+//     console.log(1);
+//     res.render('./qdsdenglu.html', {})
+// });
 
-// 登录提交接口
+// 登录提交接口 
 router.post('/doLogin', function(req, res, next) {
     var sql = `select * from users where username = '${req.body.username}' and password = '${req.body.password}'`
     con.query(sql, function(err, data) {
-        if (data.length === '0') {
+        console.log(data);
+        if (data.length === 0) {
             res.send({
                 code: 0,
                 message: '请输入正确的账号密码'

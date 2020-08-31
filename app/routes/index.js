@@ -29,6 +29,13 @@ router.get('/aaap', function(req, res, next) {
     console.log(1111)
     res.render('./qdsgwc.html', {});
 });
+// 跳转登陆界面
+router.get('/denglu', function(req, res, next) {
+    // console.log(req)
+    console.log(1111)
+    res.render('./qdsdenglu.html', {});
+});
+
 // router.get('/aaap/:id', function(req, res, next) {
 //     var id = req.params.id
 //     res.render('./qdsgwc.html', {});

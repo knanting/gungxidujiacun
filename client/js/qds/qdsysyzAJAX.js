@@ -33,6 +33,10 @@ $(function () {
            $('.shopping_ba').html(html)
            $('.shopping-img').html(htmla)
            $('.fangda').html(htmla)
+           $('.shopping_ba img').on('click',(e)=>{
+            $('.shopping-img').html($(e.target)[0].outerHTML)
+         $('.fangda').html($(e.target)[0].outerHTML)
+      })
          
         });
     }
