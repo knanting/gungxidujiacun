@@ -11,7 +11,7 @@ function fun() {
       let start = ($(".active").text() - 1) * 6;
       let end = $(".active").text() * 6 - 1;
       for (let i = start; i <= end; i++) {
-        // console.log(data.data[i]);
+        // console.log(data.data);
         let imgsrc = eval("(" + data.data[i].imgsrc + ")");
         // console.log(imgsrc);
         let src = (html += `<li>

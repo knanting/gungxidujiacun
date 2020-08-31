@@ -35,9 +35,7 @@
           </div>
           <div class="ban">
             <div class="inner">
-              <ul class="newlist clearfix">
-               
-              </ul>
+              <ul class="newlist clearfix"></ul>
             </div>
           </div>
         </div>
@@ -56,7 +54,6 @@
             class: "*",
           },
           success: (data) => {
-            // console.log(data);
             let html = "";
             for (let i = 0; i <= 5; i++) {
               // console.log(data.data[i]);
@@ -84,6 +81,13 @@
                   </div>
                   </li>`);
             }
+            $(".inner ul").on("click", ".txts", function () {
+              //attr获取标签的属性
+              // console.log($(this).children('.noeti').attr('title'))
+              // console.log($('.noeti').attr('id'))
+              $.cookie("id", $(this).children(".noeti").attr("id"));
+              // $.cookie('title', $(this).children('.noeti').attr('title') )
+            });
             $(".inner ul").html(html);
             var ind = $.cookie("id") - 73;
             var val = data.data[`${ind}`].content;

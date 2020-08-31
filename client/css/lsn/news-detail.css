@@ -23,7 +23,7 @@
       center;
     background-size: auto;
     width: inherit;
-    height: inherit;
+    /* height: inherit; */
     padding-top: 50px;
   }
   .news-detail-box2 {
@@ -76,7 +76,7 @@
   /* 内容区 */
   .news-detail-box4{
       width: 1200px;
-      height: 1873px;
+      /* height: 1873px; */
       overflow: hidden;
       margin: 0 auto;
   }

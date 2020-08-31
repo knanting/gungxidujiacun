@@ -11,6 +11,11 @@
     />
     <link rel="stylesheet" href="./css/lsn/swiper.css" />
     <link rel="stylesheet" href="./css/lsn/news-detail.css" />
+    <style>
+      /* body{
+        height: 100000px;
+      } */
+    </style>
   </head>
   <body>
     <div class="news-detail">
@@ -45,9 +50,6 @@
                 <div class="news-detail-tit1">
                   <div class="news-detail-tit2">
                     <h1 class="news-detail-title">
-                      <div class="news-detail-font">
-                      
-                      </div>
                     </h1>
                   </div>
                 </div>
@@ -60,15 +62,13 @@
                       <div class="viewBox news-detail-title">
                         <div class="news-deatil-font">
                           <i class="iconfont icon-yanjing"></i>
-                          <span class="i_browsingVolume">
-                            浏览量
-                          </span>
+                          <span class="i_browsingVolume"> 浏览量 </span>
                         </div>
                       </div>
                       <div class="viewBox1 news-detail-title">
                         <div class="news-detail-font">
                           <i class="iconfont"></i>
-                          87
+                          <span></span>
                         </div>
                       </div>
                     </div>
@@ -87,15 +87,7 @@
                     <div class="swiper-container">
                       <!-- 图片 -->
                       <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <img src="./images/lsn/xwzx1-1.jpg" alt="" />
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="./images/lsn/xwzx1-2.jpg" alt="" />
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="./images/lsn/xwzx1-3.jpg" alt="" />
-                        </div>
+                       
                       </div>
                       <!-- 左右按钮 -->
                       <div class="news-detail-pre">
@@ -113,7 +105,7 @@
                     </div>
                   </article>
                 </div>
-                <div class="news-detail-assit"></div> 
+                <div class="news-detail-assit"></div>
                 <div class="news-detail-line2"></div>
                 <!--  -->
                 <div class="e_box e_box-000 p_PrevAndNext">
@@ -152,10 +144,52 @@
       </div>
     </div>
     <script src="./js/jquery-3.0.0.min.js"></script>
-    <script src="./js/lsn/swiper.js"></script>
     <script src="./js/jquery.cookie.js"></script>
+    <script src="./js/lsn/swiper.js"></script>
     <script>
-      var myswiper = new Swiper(".swiper-container", {
+      var ind = $.cookie("id")
+        $.ajax({
+          url: "http://localhost:3000/getDetailsById",
+          method: "get",
+          data: {
+            type: "新闻资讯",
+            id:ind
+          },
+          success: (data) => {
+            console.log(data.data)
+            let imgsrc=eval("(" + data.data[0].imgsrc + ")")
+            console.log($('.news-detail-rest'));
+           $('.news-detail-title').eq(0).text(data.data[0].title)
+           $('.news-detail-font span').text(data.data[0].views)
+           $('.news-detail-line1').text(data.data[0].introduce)
+           let html=''
+           imgsrc.forEach(item=>{
+            html+=`
+                      <div class="swiper-slide">
+                          <img src="${item}" alt="" />
+                      </div>
+                        `
+           })
+           $('.swiper-wrapper').html(html)
+           $('.news-detail-rest').html(data.data[0].content)
+          }
+        });
+        $.ajax({
+          url: "http://localhost:3000/getDetailsById",
+          method: "get",
+          data: {
+            type: "新闻资讯",
+            id:ind-1
+          },
+          success:(data)=>{
+            if(data.code=0){
+              $('.font').text('无')
+            }else{
+              $('.font').text(data.data[0].title)
+            }
+          }
+        })
+        var myswiper = new Swiper(".swiper-container", {  
         loop: true,
         autoplay: true,
         navigation: {
@@ -163,28 +197,6 @@
           prevEl: ".swiper-button-prev",
         },
       });
-
-      function fun() {
-        $.ajax({
-          url: "http://localhost:3000/getData",
-          method: "get",
-          data: {
-            type: "新闻资讯",
-            class: "*",
-          },
-          success: (data) => {
-            //console.log(data.data)
-            //title和文章内容
-            var ind = $.cookie("id") - 73;
-            var val = data.data[`${ind}`].content;
-            var val1 = data.data[`${ind}`].title;
-            // console.log(val1);
-            $(".news-detail-rest").append(val);
-            $(".news-detail-font").append(val1);
-          },
-        });
-      }
-      fun();
     </script>
   </body>
 </html>
