@@ -22,7 +22,7 @@ router.get('/getData', function(req, res, next) {
             var sql = `select * from resources where type = '${req.query.type}' and newsclass = '${req.query.class}'`;
         }
         con.query(sql, function(err, data) {
-            if (data.length === '0') {
+            if (data.length === 0) {
                 res.send({
                     code: 0,
                     data: '请输入正确的类别',
@@ -50,7 +50,7 @@ router.get('/getDetailsByTitle', function(req, res, next) {
     if (req.query.type) {
         var sql = `select * from resources where type = '${req.query.type}' and title= '${req.query.title}'`
         con.query(sql, function(err, data) {
-            if (data.length === '0') {
+            if (data.length === 0) {
                 res.send({
                     code: 0,
                     data: '未查找到数据',
@@ -77,7 +77,7 @@ router.get('/getDetailsById', function(req, res, next) {
     if (req.query.type) {
         var sql = `select * from resources where type = '${req.query.type}' and id= '${req.query.id}'`
         con.query(sql, function(err, data) {
-            if (data.length === '0') {
+            if (data.length === 0) {
                 res.send({
                     code: 0,
                     data: '未查找到数据',
