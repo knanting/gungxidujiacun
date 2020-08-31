@@ -434,7 +434,7 @@
     .iconfont{
         display: inline;
     color: inherit;
-    height: 100%;
+    /* height: 100%; */
     color: inherit;
     font-size: inherit;
     font-family: inherit;
@@ -447,8 +447,4 @@
     font-weight: normal;
     text-decoration: none;
     }
-    .iconfont::before{
-        float: right;
-    margin-top: 3px;
-    content: "";
-    }
+    

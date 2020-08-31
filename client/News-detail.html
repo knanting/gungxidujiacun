@@ -23,10 +23,10 @@
         <div class="news-detail-box1">
           <div class="news-detail-box2">
             <div class="news-detail-Industry">
-              <a href=""><span>行业新闻</span></a>
+              <a href="/a"><span>行业新闻</span></a>
             </div>
             <div class="news-detail-Yunshe">
-              <a href=""><span>云舍新闻</span></a>
+              <a href="/b"><span>云舍新闻</span></a>
             </div>
           </div>
           <div class="news-detail-box3">
@@ -49,8 +49,7 @@
                 <!-- 标题 -->
                 <div class="news-detail-tit1">
                   <div class="news-detail-tit2">
-                    <h1 class="news-detail-title">
-                    </h1>
+                    <h1 class="news-detail-title"></h1>
                   </div>
                 </div>
                 <!-- 信息区 -->
@@ -86,9 +85,7 @@
                   <div class="news-detail-pica">
                     <div class="swiper-container">
                       <!-- 图片 -->
-                      <div class="swiper-wrapper">
-                       
-                      </div>
+                      <div class="swiper-wrapper"></div>
                       <!-- 左右按钮 -->
                       <div class="news-detail-pre">
                         <div class="swiper-button-prev"></div>
@@ -112,27 +109,28 @@
                   <div class="e_box e_box-000 p_previewBox">
                     <div class="e_title e_name-001 p_nameD">
                       <div class="font">
-                        <i class="iconfont"></i
-                        ><span class="i_pageChangeUpTitle">上一篇：</span>
+                          <span class="i_pageChangeUpTitle">上一篇：</span>
                       </div>
                     </div>
-                    <div class="e_title e_MinorLink-001 p_PreviewTitle">
-                      <div class="font"><i class="iconfont"></i>无</div>
-                    </div>
-                  </div>
-                  <div class="e_box e_box-000 p_nextBox">
-                    <a href="/news/82.html" class="e_link e_link-000 p_LinkD">
-                      <div class="e_title e_MinorLink-001 p_PreviewTitle">
+                    <a href="/c" class="e_link e_link-000 p_LinkD">
+                      <div class=" e_MinorLink-001 p_PreviewTitle">
                         <div class="font">
-                          <i class="iconfont"></i
-                          >当世界开始复苏，你需要这份来自云舍度假村的诚挚邀约
+                          
                         </div>
                       </div>
                     </a>
-                    <div class="e_title e_name-001 p_nameE">
+                  </div>
+                  <div class="e_box e_box-000 p_nextBox">
+                    <a href="/c" class="e_link e_link-000 p_LinkD">
+                      <div class=" e_MinorLink-002 p_PreviewTitle">
+                        <div class="font">
+                          <i class="iconfont"></i>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="e_name-001 p_nameE">
                       <div class="font">
-                        <i class="iconfont"></i
-                        ><span class="i_pageChangeDownTitle">下一篇：</span>
+                        <span class="i_pageChangeDownTitle">下一篇：</span>
                       </div>
                     </div>
                   </div>
@@ -147,54 +145,55 @@
     <script src="./js/jquery.cookie.js"></script>
     <script src="./js/lsn/swiper.js"></script>
     <script>
-      var ind = $.cookie("id")
-        $.ajax({
-          url: "http://localhost:3000/getDetailsById",
-          method: "get",
-          data: {
-            type: "新闻资讯",
-            id:ind
-          },
-          success: (data) => {
-            console.log(data.data)
-            let imgsrc=eval("(" + data.data[0].imgsrc + ")")
-            console.log($('.news-detail-rest'));
-           $('.news-detail-title').eq(0).text(data.data[0].title)
-           $('.news-detail-font span').text(data.data[0].views)
-           $('.news-detail-line1').text(data.data[0].introduce)
-           let html=''
-           imgsrc.forEach(item=>{
-            html+=`
+      var ind = $.cookie("id");
+      $.ajax({
+        url: "http://localhost:3000/getDetailsById",
+        method: "get",
+        data: {
+          type: "新闻资讯",
+          id: ind,
+        },
+        success: (data) => {
+          console.log(data.data);
+          let imgsrc = eval("(" + data.data[0].imgsrc + ")");
+          console.log($(".news-detail-rest"));
+          $(".news-detail-title").eq(0).text(data.data[0].title);
+          $(".news-detail-font span").text(data.data[0].views);
+          $(".news-detail-line1").text(data.data[0].introduce);
+          $(".e_MinorLink-002 .font").eq(0).text(data.data[0].title);
+          let html = "";
+          imgsrc.forEach((item) => {
+            html += `
                       <div class="swiper-slide">
                           <img src="${item}" alt="" />
                       </div>
-                        `
-           })
-           $('.swiper-wrapper').html(html)
-           $('.news-detail-rest').html(data.data[0].content)
+                        `;
+          });
+          $(".swiper-wrapper").html(html);
+          $(".news-detail-rest").html(data.data[0].content);
+          var myswiper = new Swiper(".swiper-container", {
+            loop: true,
+            autoplay: true,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+        },
+      });
+      $.ajax({
+        url: "http://localhost:3000/getDetailsById",
+        method: "get",
+        data: {
+          type: "新闻资讯",
+          id: ind - 1,
+        },
+        success: (data) => {
+          if ((data.code = 0)) {
+            $(".e_MinorLink-001 .font").text("无");
+          } else {
+            $(".e_MinorLink-001 .font").text(data.data[0].title);
           }
-        });
-        $.ajax({
-          url: "http://localhost:3000/getDetailsById",
-          method: "get",
-          data: {
-            type: "新闻资讯",
-            id:ind-1
-          },
-          success:(data)=>{
-            if(data.code=0){
-              $('.font').text('无')
-            }else{
-              $('.font').text(data.data[0].title)
-            }
-          }
-        })
-        var myswiper = new Swiper(".swiper-container", {  
-        loop: true,
-        autoplay: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
         },
       });
     </script>
