@@ -90,4 +90,76 @@ router.post('/feedback', function(req, res, next) {
     })
 })
 
+
+//购物车接口
+router.post('/usercars', function(req, res, next) {
+    var sql1 = `show tables`
+    con.query(sql1, function(err, data) {
+        data.forEach(item => {
+            if (item.Tables_in_yunshedujiacun === `${req.body.username}car`) {
+                var sql2 = `insert into ${req.body.username}car values (${req.body.id},${req.body.number})`
+                con.query(sql2, function(err, data) {
+                    if (err) {
+                        res.send({
+                            code: 0,
+                            message: '加入购物车失败'
+                        })
+                    } else {
+                        con.query(`select * from ${req.body.username}car`, function(err, data) {
+                            res.send({
+                                code: 1,
+                                data: data,
+                                message: '加入购物车成功'
+                            })
+                        })
+                        con.query(`update resources set stock=0 where id=${req.body.id}`, function(err, data) {
+                            if (err) {
+
+                            } else {
+
+                            }
+                        })
+                    }
+                })
+            } else {
+                var sql3 = `CREATE TABLE ${req.body.username}car
+                    (
+                        id int(11),
+                        number int(11) 
+                    )`
+                con.query(sql3, function(err, data) {
+                    if (err) {
+
+                    } else {
+                        var sql4 = `insert into ${req.body.username}car values (${req.body.id},${req.body.number})`
+                        con.query(sql4, function(err, data) {
+                            if (err) {
+                                res.send({
+                                    code: 0,
+                                    message: '加入购物车失败'
+                                })
+                            } else {
+                                con.query(`select * from ${req.body.username}car`, function(err, data) {
+                                    res.send({
+                                        code: 1,
+                                        data: data,
+                                        message: '加入购物车成功'
+                                    })
+                                })
+                                con.query(`update resources set stock=0 where id=${req.body.id}`, function(err, data) {
+                                    if (err) {
+
+                                    } else {
+
+                                    }
+                                })
+                            }
+                        })
+                    }
+                })
+            }
+        })
+    })
+})
+
 module.exports = router;
