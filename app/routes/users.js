@@ -158,20 +158,6 @@ router.post('/usercars', function(req, res, next) {
                 })
             }
         })
-
-        // res.send(data[0].Tables_in_yunshedujiacun)
-        // if (err) {
-        //     console.log(err);
-        //     res.send({
-        //         code: 0,
-        //         message: '反馈失败！'
-        //     })
-        // } else {
-        //     res.send({
-        //         code: 1,
-        //         message: '反馈成功！'
-        //     })
-        // }
     })
 })
 
