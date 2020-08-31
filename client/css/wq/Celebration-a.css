@@ -17,7 +17,7 @@
     width: 100%;
     height: 100%;
     background: url('../../images/wq/Celebration_33.jpg') repeat-y center;
-    padding: 40px 0;
+    padding: 40px 0 0;
 }
 
 /* 标题 */
@@ -38,8 +38,8 @@
 /* 内容主体 */
 .CSubpage-main{
     width: 1130px ;
-    margin: 24px auto ;
-    padding: 10px 35px ;
+    margin: 24px auto 0;
+    padding: 10px 35px;
 }
 .CSubpage-sub{
     width: 100%;
@@ -50,4 +50,70 @@
     font-size: 22px;
     color: rgba(69, 61, 59, 1);
     font-weight: 400;
+}
+/* 浏览量 */
+.CSubpage-browse{
+width:1118PX;
+padding: 0 6px;
+height: 22px;
+margin: 20px auto 4px;
+font-size: 12px;
+color: #c8c8c8;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+.CSubpage-browse>div{
+    padding: 0 4px;
+}
+.CSubpage-browse>p{
+    color: #969696;
+}
+/* 外框 */
+.CSubpage-frame{
+    width: 1108px;
+    height: 831px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.CSubpage-frame>img{
+    display: block;
+    width: 1000px;
+    height: 668px;
+}
+/* p */
+.CSubpage-p{
+    font-size: 14px;
+    color: #707070;
+    line-height: 20px;
+}
+/* 分页 */
+.CSubpage-paging{
+    width: 1130px;
+    height: 30px;
+    margin: 30px auto 0 ;
+    padding: 20px 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #cccccc;
+
+}
+.CSubpage-paging>div{
+    display: flex;  
+    height: 30px;
+    align-items: center;
+}
+.CSubpage-paging>div>p:nth-child(1){
+    font-size: 14px;
+    color: #969696;
+}
+.CSubpage-paging>div>p:nth-child(2){
+    color: #453d3b;
+    font-size: 16px;
+    padding: 0 6px;
 }
