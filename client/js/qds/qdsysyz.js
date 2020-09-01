@@ -122,7 +122,7 @@ $(function () {
                 //    console.log($(this).children($('.hppt img')).attr("apps"))
                    var appss= $(this).children().attr("apps")
                    console.log(appss)
-                   localStorage.setItem('id',appss)
+                   $.cookie('id',appss)
                    window.location.href = "./aaap";
                })
           

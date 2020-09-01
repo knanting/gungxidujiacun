@@ -14,9 +14,10 @@ router.use(bodyParser.json());
 
 // 登录提交接口 
 router.post('/doLogin', function(req, res, next) {
-    var sql = `select * from users where username = '${req.body.username}' and password = '${req.body.password}'`
+    console.log(req.body.username, req.body.password)
+    var sql = `select * from users where username = '${req.body.username}' && password = '${req.body.password}'`
     con.query(sql, function(err, data) {
-        console.log(data);
+        // console.log(data);
         if (data.length === 0) {
             res.send({
                 code: 0,

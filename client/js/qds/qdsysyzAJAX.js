@@ -9,7 +9,7 @@ $(function () {
     },
     success: function (data){
        
-        var pddsss = localStorage.getItem('id')   
+        var pddsss =  $.cookie('id')  
         // console.log(typeof pddsss)
           var  html=""
           var  htmla=''
