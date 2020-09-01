@@ -3,7 +3,7 @@ $(function () {
         url: 'http://localhost:3000/getData',
         methods: 'get',
         data: {
-            type: '活动庆典',
+            type: '*',
             class: '*'
         },
         success: (data) => {
@@ -220,25 +220,18 @@ $(function () {
             $('.Celebration-content').on('click', '.Celebration-CCont', function () {
                 // 获取id值
                 var id = $(this).children('.Celebration-CCTPic').attr('data-id');
-                // 存到本地web存储
-                localStorage.setItem('id', id)
-                // 获取活动庆典的id范围跳转至指定的页面
-                $.ajax({
-                    url: 'http://localhost:3000/getData',
-                    methods: 'get',
-                    data: {
-                        type: '活动庆典',
-                        class: '*'
-                    },
-                    success: (data) => {
-                        if (id >= data.data[0].id && id <= data.data[(data.data.length - 1)].id) {
-                            // 跳转新页面
-                            location.href = "Celebration-a";
-                        }
-
-                    }
-                })
-
+                // 存到cookie存储
+                $.cookie('id', id)
+                // 根据type的值跳转页面
+                if (data.data[id].type == '村落环境') {
+                    location.href = "";
+                } else if (data.data[id].type == '云舍驿站') {
+                    location.href = "";
+                } else if (data.data[id].type == '活动庆典') {
+                    location.href = "Celebration-a";
+                } else if (data.data[id].type == '新闻资讯') {
+                    location.href = "";
+                }
             })
 
         }
