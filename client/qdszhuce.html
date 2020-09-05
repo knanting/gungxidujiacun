@@ -1,11 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1582419_49rqs7dgiie.css">
+    <link rel="stylesheet" href="./top-foot/css/top-foot.css">
+    <link rel="stylesheet" href="./css/qds/qdszhuce.css">
 </head>
+
 <body>
-    
+    <div class="ding">
+        <!-- 顶部 -->
+        <%-include('./top.html')%>
+    </div>
+    <div>
+        <div class="bankua">
+            <div class="bankua_a">
+                <div class="huiyuan clearfix">
+                    <div class="xiyu">
+                        <h1 class="geren dog">个人会员</h1>
+                        <h1 class="qiye ">企业会员</h1>
+                    </div>
+                </div>
+                <div class="biao">
+                    <form>
+                        <div class="yong">
+                            用户名： <input type="text" id="username" placeholder="请输入账号" class="yonghu">
+                            <div class="yonghu_a"></div>
+                        </div>
+                        <div class="yong coco" style="display: none;">
+                            企业名称：<input type="text" id="company" placeholder="请输入企业名称" class="qiye">
+                            <div class="qiyea"></div>
+                        </div>
+                        <div class="yong cocd" style="display: none;">
+                            所属地区：
+                            <select name="" id="pro" class="abb">
+                                <option></option>
+                            </select>
+
+                            <select name="" id="city" class="acc">
+                                <option></option>
+                            </select>
+                            <select name="" id="area" class="add">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="yong">
+                            手机号：<input type="text" id="number" placeholder="请输入手机号" class="shouj">
+                            <div class="hapi"></div>
+                        </div>
+                        <div class="yong">
+                            设置密码： <input type="text" id="password" placeholder="请输入密码" class="cmima">
+                        </div>
+                        <div class="yong">
+                            确认密码： <input type="text" id="password" placeholder="请确认密码" class="qmima">
+                            <div class="mima"></div>
+                        </div>
+                        <div class="yongxi">
+                            <input type="radio" checked class="apps">
+                            <span>阅读并同意《xx网站服务协议》</span>
+                        </div>
+                        <div class="yong">
+                            <input type="submit" value="立即注册" id="register" class="appsd_a">
+                            <div class="appx">登陆成功等待跳转</div>
+                        </div>
+                    </form>
+                   <div class="qu">已有账号,<span class="aaa">去登陆</span></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="di">
+        <%-include('./foot.html')%>
+    </div>
+    <script src="./js/qds/jquery.js"></script>
+    <script src="./js/qds/area.js"></script>
+    <script src="./js/qds/qdszhuce.js"></script>
+
+    <script>
+        $(function () {
+            $('.geren').on('click', function () {
+                $('.geren').addClass('dog')
+                $('.qiye').removeClass('dog')
+                $('.coco').css({
+                    display: 'none'
+                })
+                $('.cocd').css({
+                    display: 'none'
+                })
+            })
+            $('.qiye').on('click', function () {
+                $('.qiye').addClass('dog')
+                $('.geren').removeClass('dog')
+                $('.coco').css({
+                    display: 'block'
+                })
+                $('.cocd').css({
+                    display: 'block'
+                })
+            })
+
+            $('.aaa').on('click',function(){
+                window.location.href = "./denglu";
+            })
+        })
+
+
+    </script>
 </body>
+
 </html>

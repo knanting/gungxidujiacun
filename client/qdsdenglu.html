@@ -15,30 +15,34 @@
     <div>
         <!-- 顶部 -->
         <%-include('./top.html')%>
-    <!-- </div>
-    <div class="abc">
-        <div class="hani">
-            <div class="hani_a">
-                <div class="hani_b">会员登陆</div>
-            </div>
-            <div class="shuru">
-                <div>
-                    <div class="bai"></div>
-                    <div class="apa">
-                        <i class="iconfont icon-zhanghao api"></i>
-                        <input type="text" placeholder="用户名" id="username">
-                    </div>
-                    <div class="apb">
-                        <i class="iconfont icon-mima api"></i>
-                        <input type="text" placeholder="请输入密码" id="password">
-                    </div>
-                    <div class="dianj">
-                        登陆
-                    </div>
+  
+        <div class="abc">
+            <div class="hani">
+                <div class="hani_a">
+                    <div class="hani_b">会员登陆</div>
+                </div>
+                <div class="shuru">
+                    <div>
+                        <div class="bai"></div>
+                    <form action="" method="post">
+                        <div class="apa">
+                            <i class="iconfont icon-zhanghao api"></i>
+                            <input type="text" id="accound" placeholder="用户名" class="apps">
+                            <div class="codea">请输入正确的账号密码</div>
+                        </div>
+                        <div class="apb">
+                            <i class="iconfont icon-mima api"></i>
+                            <input type="password" id="psw" placeholder="请输入密码">
+                        </div>
+    
+                        <div >
+                            <input type="submit" value="登录" id="login" class="dianj">
+                        </div>
+                    </form>
                     <div class="xiala">
                         <div class="zuo">
                             <i class="iconfont icon-zhuce"></i>
-                            <span>立即注册</span>
+                            <span class="qdss">立即注册</span>
                         </div>
                         <div class="you">
                             <i class="iconfont icon-wangjimima"></i>
@@ -47,24 +51,14 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
-    </div> -->
-    <div>
-        <form action=""  method="post">
-            账号： <input type="text" id="accound" placeholder="用户名">
-            <div class="codea">请输入正确的账号密码</div>
-            <br>
-            <br>
-            密码： <input type="password" id="psw" placeholder="请输入密码">
-            <br>
-            <br>
-            <input type="submit" value="登录" id="login">
-         </form>
-    </div>
-    <!-- 底部 -->
-    <%-include('./foot.html')%>
-    <script src="./js/qds/jquery.js"></script>
-    <script src="./js/qds/qdsdenglu.js"></script>
+        <!-- 底部 -->
+        <%-include('./foot.html')%>
+        <script src="./js/qds/jquery.js"></script>
+        <script src="./js/jquery.cookie.js"></script>
+        <script src="./js/qds/qdsdenglu.js"></script>
+
 </body>
 
 </html>

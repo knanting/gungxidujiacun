@@ -109,6 +109,12 @@ margin-bottom: 20px;
     color: red;
     display: none;
 }
+input{
+    
+	outline:none;  
+	border:1px solid #ccc;
+}
+
 
 
 

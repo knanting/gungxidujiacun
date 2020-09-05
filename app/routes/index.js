@@ -35,11 +35,11 @@ router.get('/denglu', function(req, res, next) {
     console.log(1111)
     res.render('./qdsdenglu.html', {});
 });
-
-// router.get('/aaap/:id', function(req, res, next) {
-//     var id = req.params.id
-//     res.render('./qdsgwc.html', {});
-// });
+// 跳转注册
+router.get('/zhuc', function(req, res, next) {
+    var id = req.params.id
+    res.render('./qdszhuce.html', {});
+});
 
 router.get('/getData', function(req, res, next) {
     if (req.query.type) {

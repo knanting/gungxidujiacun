@@ -58,5 +58,27 @@ $(function(){
          })
      })
   
+ //   点击减号减一个房间
+   $('.jian').on('click',function(){
+      // console.log(typeof  )
+     var apps = parseInt($('.ipt').val()) - 1
+     if(apps < 0){
+         apps = 0
+       }
+     $('.ipt').val(apps)
+     $('.yi').text(apps + 1)
+
+  })
+   // 点击加一个房间
+  $('.jia').on('click',function(){
+   // console.log(typeof  )
+    var apps = parseInt($('.ipt').val()) + 1
+    if(apps > 1){
+      apps = 1
+    }
+     $('.ipt').val(apps)
+     $('.yi').text(apps - 1)
+
+})
 
 })
